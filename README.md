@@ -2,9 +2,11 @@
 OpenCv4 demo C#/C++/Python 三合一版本
 
 注意：第35讲之前，部分版本是opencv3的，后续会持续升级到opencv4
+
 官方演示地址：http://www.bilibili996.com/Course/article_list?id=20224789774006
 
 【OpenCv基础】第1讲 打开一张图片
+
 【OpenCv基础】第2讲 利用imwrite生成透明png图像
 
 【OpenCv基础】第3讲 图像打开、混合显示和输出
