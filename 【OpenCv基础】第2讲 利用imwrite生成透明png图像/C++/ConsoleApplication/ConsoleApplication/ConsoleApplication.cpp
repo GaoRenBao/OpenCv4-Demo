@@ -28,7 +28,7 @@ int main()
 	//waitKey(0);
 
 	vector<int>compression_params;
-	compression_params.push_back(CV_IMWRITE_PNG_COMPRESSION);
+	compression_params.push_back(IMWRITE_PNG_COMPRESSION);
 	compression_params.push_back(9);
 
 	try {
