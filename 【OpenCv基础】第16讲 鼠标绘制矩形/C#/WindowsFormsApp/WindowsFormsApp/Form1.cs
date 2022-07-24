@@ -27,8 +27,7 @@ namespace WindowsFormsApp
 
             //【2】设置鼠标操作回调函数
             Cv2.NamedWindow(WINDOW_NAME);
-            CvMouseCallback GetRGBCvMouseCallback = new CvMouseCallback(on_MouseHandle);
-            Cv2.SetMouseCallback(WINDOW_NAME, GetRGBCvMouseCallback);
+            Cv2.SetMouseCallback(WINDOW_NAME, new MouseCallback(on_MouseHandle));
 
             //【3】程序主循环，当进行绘制的标识符为真时，进行绘制
             while (true)
@@ -42,10 +41,10 @@ namespace WindowsFormsApp
                 if (Cv2.WaitKey(10) == 27) break;//按下ESC键，程序退出
             }
         }
-        public void on_MouseHandle(MouseEvent @event, int x, int y, MouseEvent flags, IntPtr userdata)
+        public void on_MouseHandle(MouseEventTypes @event, int x, int y, MouseEventFlags flags, IntPtr userData)
         {
             //鼠标移动消息
-            if (@event == MouseEvent.MouseMove)
+            if (@event == MouseEventTypes.MouseMove)
             {
                 if (g_bDrawingBox)//如果是否进行绘制的标识符为真，则记录下长和宽到RECT型变量中
                 {
@@ -54,14 +53,14 @@ namespace WindowsFormsApp
                 }
             }
             //左键按下消息
-            if (@event == MouseEvent.LButtonDown)
+            if (@event == MouseEventTypes.LButtonDown)
             {
                 g_bDrawingBox = true;
                 g_rectangle = new Rect(x, y, 0, 0);//记录起始点
             }
 
             //左键抬起消息
-            if (@event == MouseEvent.LButtonUp)
+            if (@event == MouseEventTypes.LButtonUp)
             {
                 g_bDrawingBox = false;//置标识符为false
                 //对宽和高小于0的处理

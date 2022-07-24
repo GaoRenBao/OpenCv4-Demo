@@ -20,7 +20,7 @@ int main()
 		return 1;
 	}
 
-#if false
+#if true
 	// 摄像头实时显示
 	while (1)
 	{
@@ -37,7 +37,9 @@ int main()
 
 #if false
 	// 录像，本地存储
-	VideoWriter writer("a.avi", CV_FOURCC('M', 'J', 'P', 'G'), 25.0, Size(640, 480));
+	// opencv3：CV_FOURCC('M', 'J', 'P', 'G')
+	// opencv4：VideoWriter:: fourcc('M', 'J', 'P', 'G')
+	VideoWriter writer("a.avi", VideoWriter:: fourcc('M', 'J', 'P', 'G'), 25.0, Size(640, 480));
 	while (1)
 	{
 		Mat srcImage = cap.CameraImg(0);
@@ -55,7 +57,7 @@ int main()
 	}
 #endif
 
-#if true
+#if false
 	// 读取录像信息
 	VideoCapture capture("a.avi");
 	while (1)

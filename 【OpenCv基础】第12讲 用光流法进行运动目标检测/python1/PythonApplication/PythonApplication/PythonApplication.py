@@ -64,9 +64,6 @@ if __name__ == "__main__":
     video = cv2.VideoCapture('1.avi')
     fps = video.get(cv2.CAP_PROP_FPS)
     success = True
-    success, frame = video.read()
-    cv2.imshow('result', frame)
-    cv2.waitKey(0)
     while success:
         # 读帧
         success, frame = video.read()

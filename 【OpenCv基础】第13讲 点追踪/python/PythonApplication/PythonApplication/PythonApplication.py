@@ -67,7 +67,7 @@ else:
             points2, st, err = cv2.calcOpticalFlowPyrLK(prevGray, gray, points1, None, **lk_params)
             # 绘制跟踪点
             for i, (new) in enumerate(zip(points2[st == 1])):
-                frame = cv2.circle(frame, (new[0][0],new[0][1]), 8, (0, 255, 0), -1)
+                frame = cv2.circle(frame, ((int)(new[0][0]),(int)(new[0][1])), 8, (0, 255, 0), -1)
            
         if addRemovePt == True and points2 is None :
             maskroi=np.zeros_like(gray)

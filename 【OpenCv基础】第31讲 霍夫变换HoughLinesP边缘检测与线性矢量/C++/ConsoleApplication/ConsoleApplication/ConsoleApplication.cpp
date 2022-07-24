@@ -12,7 +12,9 @@ int main()
 
 	//【2】进行边缘检测和转化为灰度图
 	Canny(srcImage, midImage, 50, 200, 3);//进行一此canny边缘检测
-	cvtColor(midImage, dstImage, CV_GRAY2BGR);//转化边缘检测后的图为灰度图
+	// opencv3：CV_GRAY2BGR
+	// opencv4：COLOR_GRAY2BGR
+	cvtColor(midImage, dstImage, COLOR_GRAY2BGR);//转化边缘检测后的图为灰度图
 
 	//【3】进行霍夫线变换
 	vector<Vec4i> lines;//定义一个矢量结构lines用于存放得到的线段矢量集合
@@ -22,7 +24,9 @@ int main()
 	for (size_t i = 0; i < lines.size(); i++)
 	{
 		Vec4i l = lines[i];
-		line(dstImage, Point(l[0], l[1]), Point(l[2], l[3]), Scalar(186, 88, 255), 2, CV_AA);
+		// opencv3：CV_AA
+		// opencv4：LINE_AA
+		line(dstImage, Point(l[0], l[1]), Point(l[2], l[3]), Scalar(186, 88, 255), 2, LINE_AA);
 	}
 
 	//【5】显示原始图  

@@ -5,14 +5,12 @@
     <ProjectGuid>01162dbe-259d-40e3-b2c3-56e82b56c3da</ProjectGuid>
     <ProjectHome>.</ProjectHome>
     <StartupFile>PythonApplication.py</StartupFile>
-    <SearchPath>..\PythonApplication</SearchPath>
+    <SearchPath>
+    </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
     <OutputPath>.</OutputPath>
     <Name>PythonApplication</Name>
     <RootNamespace>PythonApplication</RootNamespace>
-    <IsWindowsApplication>False</IsWindowsApplication>
-    <LaunchProvider>Standard Python launcher</LaunchProvider>
-    <EnableNativeCodeDebugging>False</EnableNativeCodeDebugging>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>

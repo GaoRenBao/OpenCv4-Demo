@@ -31,7 +31,9 @@ int main(int argc, char** argv)
 	g_map_y.create(g_srcImage.size(), CV_32FC1);
 
 	//【3】创建窗口并显示
-	namedWindow(WINDOW_NAME, CV_WINDOW_AUTOSIZE);
+	// opencv3：CV_WINDOW_AUTOSIZE
+	// opencv4：WINDOW_AUTOSIZE
+	namedWindow(WINDOW_NAME, WINDOW_AUTOSIZE);
 	imshow(WINDOW_NAME, g_srcImage);
 
 	//【4】轮询按键，更新map_x和map_y的值，进行重映射操作并显示效果图
@@ -49,7 +51,9 @@ int main(int argc, char** argv)
 
 		//根据按下的键盘按键来更新 map_x & map_y的值. 然后调用remap( )进行重映射
 		update_map(key);
-		remap(g_srcImage, g_dstImage, g_map_x, g_map_y, CV_INTER_LINEAR, BORDER_CONSTANT, Scalar(0, 0, 0));
+		// opencv3：CV_INTER_LINEAR
+		// opencv4：INTER_LINEAR
+		remap(g_srcImage, g_dstImage, g_map_x, g_map_y, INTER_LINEAR, BORDER_CONSTANT, Scalar(0, 0, 0));
 
 		//显示效果图
 		imshow(WINDOW_NAME, g_dstImage);

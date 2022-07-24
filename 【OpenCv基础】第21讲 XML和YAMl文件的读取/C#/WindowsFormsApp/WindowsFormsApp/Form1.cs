@@ -21,8 +21,9 @@ namespace WindowsFormsApp
         }
         private void button1_Click(object sender, EventArgs e)
         {
-            // read
-            using (var fs = new FileStorage("test.yaml", FileStorage.Mode.Read))
+            // opencv3：FileStorage.Mode.Read
+            // opencv4：FileStorage.Modes.Read
+            using (var fs = new FileStorage("test.yaml", FileStorage.Modes.Read))
             {
                 if (fs.IsOpened() == false)
                 {

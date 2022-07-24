@@ -29,7 +29,7 @@ namespace WindowsFormsApp
             Cv2.Blur(g_grayImage, g_grayImage, new Size(3, 3));
 
             //【3】创建原始图窗口并显示
-            Cv2.NamedWindow("Source", WindowMode.AutoSize);
+            Cv2.NamedWindow("Source", WindowFlags.AutoSize);
             Cv2.ImShow("Source", src);
 
             //【4】设置滚动条并调用一次回调函数
@@ -38,12 +38,11 @@ namespace WindowsFormsApp
             Cv2.WaitKey();
         }
 
-        private void thresh_callback(int pos, object userData)
+        private void thresh_callback(int pos, IntPtr userData)
         {
             Mat threshold_output = new Mat();
             // 使用Threshold检测图像边缘
             Cv2.Threshold(g_grayImage, threshold_output, thresh, 255, ThresholdTypes.Binary);
-
 
             // 找出轮廓
             Point[][] contours;

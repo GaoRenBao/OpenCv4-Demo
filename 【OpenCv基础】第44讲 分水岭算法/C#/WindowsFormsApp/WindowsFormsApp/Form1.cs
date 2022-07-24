@@ -22,20 +22,20 @@ namespace WindowsFormsApp
             InitializeComponent();
         }
 
-        public void on_Mouse(MouseEvent @event, int x, int y, MouseEvent flags, IntPtr userdata)
+        public void on_Mouse(MouseEventTypes @event, int x, int y, MouseEventFlags flags, IntPtr userData)
         {
             //处理鼠标不在窗口中的情况
             if (x < 0 || x >= g_srcImage.Cols || y < 0 || y >= g_srcImage.Rows)
                 return;
 
             //处理鼠标左键相关消息
-            if (@event == MouseEvent.LButtonUp || (flags & MouseEvent.FlagLButton) == 0)
+            if (@event == MouseEventTypes.LButtonUp || ((int)flags & (int)MouseEventTypes.LButtonDown) == 0)
 		        prevPt = new Point(-1, -1);
-	        else if (@event == MouseEvent.LButtonDown)
+	        else if (@event == MouseEventTypes.LButtonDown)
 		        prevPt = new Point(x, y);
 
             //鼠标左键按下并移动，绘制出白色线条
-            else if (@event == MouseEvent.MouseMove && (flags & MouseEvent.FlagLButton) > 0)
+            else if (@event == MouseEventTypes.MouseMove && ((int)flags & (int)MouseEventTypes.LButtonDown) > 0)
             {
 		        Point pt = new Point(x, y);
 		        if (prevPt.X < 0)
@@ -66,7 +66,7 @@ namespace WindowsFormsApp
 
             //【2】设置鼠标操作回调函数
             Cv2.NamedWindow(WINDOW_NAME1);
-            Cv2.SetMouseCallback(WINDOW_NAME1, new CvMouseCallback(on_Mouse));
+            Cv2.SetMouseCallback(WINDOW_NAME1, new MouseCallback(on_Mouse));
 
             myTask();
         }

@@ -44,7 +44,9 @@ static void ShowHelpText()
 static void onMouse(int event, int x, int y, int, void*)
 {
 	// 若鼠标左键没有按下，便返回
-	if (event != CV_EVENT_LBUTTONDOWN)
+	// opencv3：CV_EVENT_LBUTTONDOWN
+	// opencv4：EVENT_LBUTTONDOWN
+	if (event != EVENT_LBUTTONDOWN)
 		return;
 
 	//-------------------【<1>调用floodFill函数之前的参数准备部分】---------------
@@ -56,7 +58,9 @@ static void onMouse(int event, int x, int y, int, void*)
 	int UpDifference = g_nFillMode == 0 ? 0 : g_nUpDifference;
 
 	//标识符的0~7位为g_nConnectivity，8~15位为g_nNewMaskVal左移8位的值，16~23位为CV_FLOODFILL_FIXED_RANGE或者0。
-	int flags = g_nConnectivity + (g_nNewMaskVal << 8) + (g_nFillMode == 1 ? CV_FLOODFILL_FIXED_RANGE : 0);
+	// opencv3：CV_FLOODFILL_FIXED_RANGE
+	// opencv4：FLOODFILL_FIXED_RANGE
+	int flags = g_nConnectivity + (g_nNewMaskVal << 8) + (g_nFillMode == 1 ? FLOODFILL_FIXED_RANGE : 0);
 
 	//随机生成bgr值
 	int b = (unsigned)theRNG() & 255;//随机返回一个0~255之间的值
@@ -76,7 +80,9 @@ static void onMouse(int event, int x, int y, int, void*)
 	//--------------------【<2>正式调用floodFill函数】-----------------------------
 	if (g_bUseMask)
 	{
-		threshold(g_maskImage, g_maskImage, 1, 128, CV_THRESH_BINARY);
+		// opencv3：CV_THRESH_BINARY
+		// opencv4：THRESH_BINARY
+		threshold(g_maskImage, g_maskImage, 1, 128, THRESH_BINARY);
 		area = floodFill(dst, g_maskImage, seed, newVal, &ccomp, 
 			Scalar(LowDifference, LowDifference, LowDifference),
 			Scalar(UpDifference, UpDifference, UpDifference), flags);
@@ -120,7 +126,9 @@ int main(int argc, char** argv)
 	//利用image0的尺寸来初始化掩膜mask
 	g_maskImage.create(g_srcImage.rows + 2, g_srcImage.cols + 2, CV_8UC1);
 
-	namedWindow("效果图", CV_WINDOW_AUTOSIZE);
+	// opencv3：CV_WINDOW_AUTOSIZE
+	// opencv4：WINDOW_AUTOSIZE
+	namedWindow("效果图", WINDOW_AUTOSIZE);
 
 	//创建Trackbar
 	createTrackbar("负差最大值", "效果图", &g_nLowDifference, 255, 0);

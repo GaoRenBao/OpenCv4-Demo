@@ -31,7 +31,7 @@ namespace WindowsFormsApp
             Cv2.Blur(g_grayImage, g_grayImage, new Size(3, 3));
 
             //【3】创建原始图窗口并显示
-            Cv2.NamedWindow("Source", WindowMode.AutoSize);
+            Cv2.NamedWindow("Source", WindowFlags.AutoSize);
             Cv2.ImShow("Source", src);
 
             //【4】设置滚动条并调用一次回调函数
@@ -40,7 +40,7 @@ namespace WindowsFormsApp
             Cv2.WaitKey();
         }
 
-        private void thresh_callback(int pos, object userData)
+        private void thresh_callback(int pos, IntPtr userData)
         {
             // 使用Canndy检测边缘
             Cv2.Canny(g_grayImage, g_cannyMat_output, g_nThresh, g_nThresh * 2, 3);

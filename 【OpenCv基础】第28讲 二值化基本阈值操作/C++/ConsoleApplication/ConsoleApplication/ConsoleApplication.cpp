@@ -27,10 +27,14 @@ int main()
     imshow("原始图", g_srcImage);
 
     //【2】存留一份原图的灰度图
-    cvtColor(g_srcImage, g_grayImage, CV_RGB2GRAY);
+    // opencv3：CV_RGB2GRAY
+    // opencv4：COLOR_RGB2GRAY
+    cvtColor(g_srcImage, g_grayImage, COLOR_RGB2GRAY);
 
     //【3】创建窗口并显示原始图
-    namedWindow(WINDOW_NAME, CV_WINDOW_AUTOSIZE);
+    // opencv3：CV_WINDOW_AUTOSIZE
+    // opencv4：WINDOW_AUTOSIZE
+    namedWindow(WINDOW_NAME, WINDOW_AUTOSIZE);
 
     //【4】创建滑动条来控制阈值
     createTrackbar("模式",WINDOW_NAME, &g_nThresholdType,4, on_Threshold);

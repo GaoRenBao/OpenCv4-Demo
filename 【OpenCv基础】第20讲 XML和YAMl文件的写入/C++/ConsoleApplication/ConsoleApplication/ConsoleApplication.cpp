@@ -2,6 +2,7 @@
 #include <time.h> 
 
 using namespace cv;
+using namespace std;
 
 int main()
 {
@@ -10,7 +11,7 @@ int main()
 
     //初始化
     FileStorage fs("test.yaml", FileStorage::WRITE);
-
+ 
     //开始文件写入
     fs << "frameCount" << 5;
     time_t rawtime; 

@@ -21,7 +21,7 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{875843db-9a20-43b4-951c-3a420d27480b}</ProjectGuid>
+    <ProjectGuid>{16e957f8-2ce3-43a2-a548-af2f67ebd448}</ProjectGuid>
     <RootNamespace>ConsoleApplication</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
@@ -78,8 +78,8 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>D:\Program Files\opencv-3.4.0\build\include\opencv2;D:\Program Files\opencv-3.4.0\build\include\opencv;D:\Program Files\opencv-3.4.0\build\include;$(IncludePath)</IncludePath>
-    <LibraryPath>D:\Program Files\opencv-3.4.0\build\x64\vc15\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>D:\Program Files\opencv-4.5.5\build\include;D:\Program Files\opencv-4.5.5\build\include\opencv2;$(IncludePath)</IncludePath>
+    <LibraryPath>D:\Program Files\opencv-4.5.5\build\x64\vc14\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
@@ -122,7 +122,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>opencv_world340d.lib;opencv_world340.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>opencv_world455d.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">

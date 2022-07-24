@@ -31,7 +31,9 @@ int main()
 	}
 
 	//【4】进行重映射操作
-	remap(srcImage, dstImage, map_x, map_y, CV_INTER_LINEAR, BORDER_CONSTANT, Scalar(0, 0, 0));
+	// opencv3：CV_INTER_LINEAR
+	// opencv4：INTER_LINEAR
+	remap(srcImage, dstImage, map_x, map_y, INTER_LINEAR, BORDER_CONSTANT, Scalar(0, 0, 0));
 
 	//【5】显示效果图
 	imshow("【程序窗口】", dstImage);

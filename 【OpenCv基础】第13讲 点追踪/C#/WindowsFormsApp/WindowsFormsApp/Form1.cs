@@ -28,9 +28,9 @@ namespace WindowsFormsApp
 			b = t;
 		}
 
-		public void onMouse(MouseEvent @event, int x, int y, MouseEvent flags, IntPtr userdata)
+		public void onMouse(MouseEventTypes @event, int x, int y, MouseEventFlags flags, IntPtr userData)
 		{
-			if (@event == MouseEvent.LButtonDown)
+			if (@event == MouseEventTypes.LButtonDown)
 			{
 				point = new Point2f((float)x, (float)y);
 				addRemovePt = true;
@@ -49,9 +49,9 @@ namespace WindowsFormsApp
                 return;
             }
             // 设置采集的图像尺寸为：640*480
-            Cap.Set(CaptureProperty.FrameWidth, 640);
-            Cap.Set(CaptureProperty.FrameHeight, 480);       
-            Cap.Set(CaptureProperty.Exposure, -3); // 曝光
+            Cap.Set(VideoCaptureProperties.FrameWidth, 640);
+            Cap.Set(VideoCaptureProperties.FrameHeight, 480);       
+            Cap.Set(VideoCaptureProperties.Exposure, -3); // 曝光
 
             Mat frame = new Mat();
 			Mat image = new Mat();
@@ -62,11 +62,10 @@ namespace WindowsFormsApp
 			Point2f[] points1 = null;
 			Point2f[] points2 = null;
 			const int MAX_COUNT = 500;
-			TermCriteria criteria = new TermCriteria(CriteriaType.MaxIter | CriteriaType.Eps, 20, 0.03);
+			TermCriteria criteria = new TermCriteria(CriteriaTypes.MaxIter | CriteriaTypes.Eps, 20, 0.03);
 
 			Cv2.NamedWindow("CamShift Demo");
-			CvMouseCallback GetRGBCvMouseCallback = new CvMouseCallback(onMouse);
-			Cv2.SetMouseCallback("CamShift Demo", GetRGBCvMouseCallback);
+			Cv2.SetMouseCallback("CamShift Demo", new MouseCallback(onMouse));
 			var window = new Window("CamShift Demo");
 
 			while (true)

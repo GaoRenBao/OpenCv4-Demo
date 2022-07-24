@@ -1,4 +1,4 @@
-calibrationDate: 1635587328.7837517
+calibrationDate: 1658572598.7148852
 cameraMatrix: !!python/object/apply:numpy.core.multiarray._reconstruct
   args:
   - !!python/name:numpy.ndarray ''
@@ -30,7 +30,7 @@ cameraMatrix: !!python/object/apply:numpy.core.multiarray._reconstruct
   - !!binary |
     ////////qtT//1Wq/6r/1P+qqqr/qlV//1X/qv9Vqn//VVVV
 features:
-  lbp: 81
-  x: 43
-  y: 7
+  lbp: 1
+  x: 249
+  y: 221
 frameCount: 5

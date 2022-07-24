@@ -14,12 +14,16 @@ int main()
 	imshow("【原始图】", srcImage);
 
 	//【3】转为灰度图并进行图像平滑
-	cvtColor(srcImage, midImage, CV_BGR2GRAY);//转化边缘检测后的图为灰度图
+	// opencv3：CV_BGR2GRAY
+	// opencv4：COLOR_BGR2GRAY
+	cvtColor(srcImage, midImage, COLOR_BGR2GRAY);//转化边缘检测后的图为灰度图
 	GaussianBlur(midImage, midImage, Size(9, 9), 2, 2);
 
 	//【4】进行霍夫圆变换
 	vector<Vec3f> circles;
-	HoughCircles(midImage, circles, CV_HOUGH_GRADIENT, 1.5, 10, 200, 100, 0, 0);
+	// opencv3：CV_HOUGH_GRADIENT
+	// opencv4：HOUGH_GRADIENT
+	HoughCircles(midImage, circles, HOUGH_GRADIENT, 1.5, 10, 200, 100, 0, 0);
 
 	//【5】依次在图中绘制出圆
 	for (size_t i = 0; i < circles.size(); i++)

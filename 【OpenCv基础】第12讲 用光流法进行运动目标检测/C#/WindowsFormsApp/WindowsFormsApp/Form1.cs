@@ -3,7 +3,6 @@ using OpenCvSharp.Extensions;
 using System;
 using System.Windows.Forms;
 
-// 参考： https://blog.csdn.net/salt_bean_curd/article/details/107215187
 namespace WindowsFormsApp
 {
     public partial class Form1 : Form

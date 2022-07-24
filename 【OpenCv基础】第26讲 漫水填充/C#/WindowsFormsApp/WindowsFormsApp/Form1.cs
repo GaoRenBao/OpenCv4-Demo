@@ -76,14 +76,14 @@ namespace WindowsFormsApp
                 Cv2.Threshold(g_maskImage, g_maskImage, 1, 128, ThresholdTypes.Binary);
                 area = Cv2.FloodFill(dst, g_maskImage, seed, newVal, out ccomp,
                     new Scalar(LowDifference, LowDifference, LowDifference),
-                    new Scalar(UpDifference, UpDifference, UpDifference), mflags);
+                    new Scalar(UpDifference, UpDifference, UpDifference), (FloodFillFlags)mflags);
                 Cv2.ImShow("mask", g_maskImage);
             }
             else
             {
                 area = Cv2.FloodFill(dst, seed, newVal, out ccomp,
                     new Scalar(LowDifference, LowDifference, LowDifference),
-                    new Scalar(UpDifference, UpDifference, UpDifference), mflags);
+                    new Scalar(UpDifference, UpDifference, UpDifference), (FloodFillFlags)mflags);
             }
 
             Cv2.ImShow("效果图", dst);
@@ -91,10 +91,10 @@ namespace WindowsFormsApp
             Cv2.WaitKey(10);
         }
 
-        public void onMouse(MouseEvent @event, int x, int y, MouseEvent flags, IntPtr userdata)
+        public void onMouse(MouseEventTypes @event, int x, int y, MouseEventFlags flags, IntPtr userData)
         {
             // 若鼠标左键没有按下，便返回
-            if (@event != MouseEvent.LButtonDown)
+            if (@event != MouseEventTypes.LButtonDown)
                 return;
             ShowImage(x, y);
         }
@@ -111,8 +111,8 @@ namespace WindowsFormsApp
                 return;
             }
             // 设置采集的图像尺寸为：640*480
-            Cap.Set(CaptureProperty.FrameWidth, 640);
-            Cap.Set(CaptureProperty.FrameHeight, 480);
+            Cap.Set(VideoCaptureProperties.FrameWidth, 640);
+            Cap.Set(VideoCaptureProperties.FrameHeight, 480);
         
             if (!Cap.Read(g_srcImage))
             {
@@ -133,8 +133,7 @@ namespace WindowsFormsApp
             g_maskImage.Create(g_srcImage.Rows + 2, g_srcImage.Cols + 2, MatType.CV_8UC1);
 
             Cv2.NamedWindow("效果图");
-            CvMouseCallback GetRGBCvMouseCallback = new CvMouseCallback(onMouse);
-            Cv2.SetMouseCallback("效果图", GetRGBCvMouseCallback);
+            Cv2.SetMouseCallback("效果图", new MouseCallback(onMouse));
 
             //Cv2.ImShow("效果图", g_dstImage);
             ShowImage();

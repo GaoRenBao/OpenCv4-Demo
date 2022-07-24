@@ -42,13 +42,17 @@ namespace WindowsFormsApp
             Cv2.MixChannels(input, output, ch);
 
             //【3】创建 Trackbar 来输入bin的数目
-            Cv2.NamedWindow(WINDOW_NAME1, WindowMode.AutoSize);
+            // opencv3：WindowMode.AutoSize
+            // opencv4：WindowFlags.AutoSize
+            Cv2.NamedWindow(WINDOW_NAME1, WindowFlags.AutoSize);
             Cv2.CreateTrackbar("色调组距:", WINDOW_NAME1, ref g_bins, 180, on_BinChange);
             on_BinChange(0, IntPtr.Zero);
             Cv2.WaitKey(0);
         }
 
-        private void on_BinChange(int pos, object userData)
+        // opencv3：on_BinChange(int pos, object userData)
+        // opencv4：on_BinChange(int pos, IntPtr userData)
+        private void on_BinChange(int pos, IntPtr userData)
         {
             int[] channels = { 0 };
             Mat hist = new Mat();

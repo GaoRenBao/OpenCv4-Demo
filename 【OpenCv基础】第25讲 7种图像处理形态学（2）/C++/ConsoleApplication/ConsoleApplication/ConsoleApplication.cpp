@@ -112,14 +112,16 @@ void MyMorphology(int, void*)
 	morphologyEx(des, out8, MORPH_HITMISS, element);
 
 	// 显示效果图
-	putText(out1, "C++", Point(10, 30), FONT_HERSHEY_COMPLEX, 1, Scalar(0, 0, 255), 2, CV_AA);
-	putText(out2, "C++", Point(10, 30), FONT_HERSHEY_COMPLEX, 1, Scalar(0, 0, 255), 2, CV_AA);
-	putText(out3, "C++", Point(10, 30), FONT_HERSHEY_COMPLEX, 1, Scalar(0, 0, 255), 2, CV_AA);
-	putText(out4, "C++", Point(10, 30), FONT_HERSHEY_COMPLEX, 1, Scalar(0, 0, 255), 2, CV_AA);
-	putText(out5, "C++", Point(10, 30), FONT_HERSHEY_COMPLEX, 1, Scalar(0, 0, 255), 2, CV_AA);
-	putText(out6, "C++", Point(10, 30), FONT_HERSHEY_COMPLEX, 1, Scalar(0, 0, 255), 2, CV_AA);
-	putText(out7, "C++", Point(10, 30), FONT_HERSHEY_COMPLEX, 1, Scalar(0, 0, 255), 2, CV_AA);
-	putText(out8, "C++", Point(10, 30), FONT_HERSHEY_COMPLEX, 1, Scalar(0, 0, 255), 2, CV_AA);
+	// opencv3：CV_AA
+	// opencv4：LINE_AA
+	putText(out1, "C++", Point(10, 30), FONT_HERSHEY_COMPLEX, 1, Scalar(0, 0, 255), 2, LINE_AA);
+	putText(out2, "C++", Point(10, 30), FONT_HERSHEY_COMPLEX, 1, Scalar(0, 0, 255), 2, LINE_AA);
+	putText(out3, "C++", Point(10, 30), FONT_HERSHEY_COMPLEX, 1, Scalar(0, 0, 255), 2, LINE_AA);
+	putText(out4, "C++", Point(10, 30), FONT_HERSHEY_COMPLEX, 1, Scalar(0, 0, 255), 2, LINE_AA);
+	putText(out5, "C++", Point(10, 30), FONT_HERSHEY_COMPLEX, 1, Scalar(0, 0, 255), 2, LINE_AA);
+	putText(out6, "C++", Point(10, 30), FONT_HERSHEY_COMPLEX, 1, Scalar(0, 0, 255), 2, LINE_AA);
+	putText(out7, "C++", Point(10, 30), FONT_HERSHEY_COMPLEX, 1, Scalar(0, 0, 255), 2, LINE_AA);
+	putText(out8, "C++", Point(10, 30), FONT_HERSHEY_COMPLEX, 1, Scalar(0, 0, 255), 2, LINE_AA);
 
 	imshow("腐蚀【效果图】", out1);
 	imshow("膨胀【效果图】", out2);

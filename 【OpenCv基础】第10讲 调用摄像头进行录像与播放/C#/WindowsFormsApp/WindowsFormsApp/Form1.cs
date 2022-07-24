@@ -38,20 +38,24 @@ namespace WindowsFormsApp
                 MessageBox.Show("摄像头打开失败.");
                 return;
             }
-            // 设置采集的图像尺寸为：640*480
-            Cap.Set(CaptureProperty.FrameWidth, 640);
-            Cap.Set(CaptureProperty.FrameHeight, 480);
 
-            //// 亮度
-            //Cap.Set(CaptureProperty.Brightness, 1);
-            //// 对比度
-            //Cap.Set(CaptureProperty.Contrast, 0);
-            //// 饱和度
-            //Cap.Set(CaptureProperty.Saturation, 100);
-            //// 色调
-            //Cap.Set(CaptureProperty.Hue,150);
-            //// 曝光
-            //Cap.Set(CaptureProperty.Exposure, -1);
+            /* opencv3 */
+            //Cap.Set(CaptureProperty.FrameWidth, 640);  // 设置采集的图像宽度：640
+            //Cap.Set(CaptureProperty.FrameHeight, 480); // 设置采集的图像高度：480
+            //Cap.Set(CaptureProperty.Brightness, 1);    // 亮度
+            //Cap.Set(CaptureProperty.Contrast, 0);      // 对比度
+            //Cap.Set(CaptureProperty.Saturation, 100);  // 饱和度
+            //Cap.Set(CaptureProperty.Hue, 150);         // 色调
+            //Cap.Set(CaptureProperty.Exposure, -1);     // 曝光
+
+            /* opencv4 */
+            Cap.Set(VideoCaptureProperties.FrameWidth, 640);  // 设置采集的图像宽度：640
+            Cap.Set(VideoCaptureProperties.FrameHeight, 480); // 设置采集的图像高度：480
+            //Cap.Set(VideoCaptureProperties.Brightness, 1);    // 亮度
+            //Cap.Set(VideoCaptureProperties.Contrast, 0);      // 对比度
+            //Cap.Set(VideoCaptureProperties.Saturation, 100);  // 饱和度
+            //Cap.Set(VideoCaptureProperties.Hue, 150);         // 色调
+            //Cap.Set(VideoCaptureProperties.Exposure, -1);     // 曝光
 
             Mat Img = new Mat();
             var window = new Window("capture");

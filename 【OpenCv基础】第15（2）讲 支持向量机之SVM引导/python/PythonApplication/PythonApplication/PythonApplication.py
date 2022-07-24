@@ -1,3 +1,5 @@
+# 无法运行
+
 import cv2
 import numpy as np
 
@@ -107,7 +109,7 @@ for i in range(sv.rows):
     I = cv2.circle(I, (int(sv[0]), int(sv[1])), 6, (128, 128, 128), 2, 8 , 0)
 #! [show_vectors]
 
-imwrite("result.png", I);	                   # save the Image
+# imwrite("result.png", I);	                   # save the Image
 imshow("SVM for Non-Linear Training Data", I); # show it to the user
 waitKey(0);
 

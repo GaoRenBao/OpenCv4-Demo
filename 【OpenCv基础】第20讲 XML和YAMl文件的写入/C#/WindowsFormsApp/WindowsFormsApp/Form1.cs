@@ -2,8 +2,6 @@
 using System;
 using System.Windows.Forms;
 
-// 官方参考：OpenCvSharp.Tests\core\FileStorageTest.cs
-
 namespace WindowsFormsApp
 {
     public partial class Form1 : Form
@@ -16,7 +14,9 @@ namespace WindowsFormsApp
         private void button1_Click(object sender, EventArgs e)
         {
             //开始文件写入
-            using (var fs = new FileStorage("test.yaml", FileStorage.Mode.Write))
+            // opencv3：FileStorage.Mode.Write
+            // opencv4：FileStorage.Modes.Write
+            using (var fs = new FileStorage("test.yaml", FileStorage.Modes.Write))
             {
                 fs.Add("frameCount").Add(5);
                 fs.Add("calibrationDate").Add(DateTime.Now.ToString());

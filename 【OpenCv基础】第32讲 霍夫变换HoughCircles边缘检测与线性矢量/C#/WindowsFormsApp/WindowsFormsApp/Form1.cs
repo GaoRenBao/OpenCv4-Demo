@@ -28,7 +28,9 @@ namespace WindowsFormsApp
 			Cv2.GaussianBlur(midImage, midImage, new Size(9, 9), 2, 2);
 
 			//【4】进行霍夫圆变换
-			CircleSegment[] circles = Cv2.HoughCircles(midImage, HoughMethods.Gradient, 1.5, 10, 200, 100, 0, 0);
+			// opencv3：HoughMethods.Gradient
+			// opencv4：HoughModes.Gradient
+			CircleSegment[] circles = Cv2.HoughCircles(midImage, HoughModes.Gradient, 1.5, 10, 200, 100, 0, 0);
 
 			//【5】依次在图中绘制出圆
 			for (int i = 0; i < circles.Length; i++)

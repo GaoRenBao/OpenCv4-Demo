@@ -19,7 +19,9 @@ int main()
 	GaussianBlur(src, src, Size(3, 3), 0, 0, BORDER_DEFAULT);
 
 	//【4】转换为灰度图
-	cvtColor(src, src_gray, CV_RGB2GRAY);
+	// opencv3：CV_RGB2GRAY
+	// opencv4：COLOR_RGB2GRAY
+	cvtColor(src, src_gray, COLOR_RGB2GRAY);
 
 	//【5】使用Laplace函数
 	Laplacian(src_gray, dst, CV_16S, 3, 1, 0, BORDER_DEFAULT);

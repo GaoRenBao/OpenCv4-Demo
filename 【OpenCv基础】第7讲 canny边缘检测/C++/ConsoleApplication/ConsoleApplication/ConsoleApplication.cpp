@@ -32,7 +32,7 @@ int main()
 	dstImage.create(srcImage1.size(), srcImage1.type());
 
 	// 【2】将原图像转换为灰度图像
-	cvtColor(srcImage1, grayImage, CV_BGR2GRAY);
+	cvtColor(srcImage1, grayImage, COLOR_BGR2GRAY);
 
 	// 【3】先用使用 3x3内核来降噪
 	blur(grayImage, edge, Size(3, 3));

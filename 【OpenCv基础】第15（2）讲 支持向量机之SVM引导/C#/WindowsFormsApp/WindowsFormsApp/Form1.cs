@@ -72,7 +72,11 @@ namespace WindowsFormsApp
             svm.Type = SVM.Types.CSvc;
             svm.C = 0.1;
             svm.KernelType = SVM.KernelTypes.Linear;
-            svm.TermCriteria = new TermCriteria(CriteriaType.MaxIter, (int)1e7, 1e-6);
+
+            // opencv3：CriteriaType.MaxIter
+            // opencv4：CriteriaTypes.MaxIter
+            svm.TermCriteria = new TermCriteria(CriteriaTypes.MaxIter, (int)1e7, 1e-6);
+
             //! [init]
             //! [train]
             svm.Train(trainData, SampleTypes.RowSample, labels); // 训练分类器

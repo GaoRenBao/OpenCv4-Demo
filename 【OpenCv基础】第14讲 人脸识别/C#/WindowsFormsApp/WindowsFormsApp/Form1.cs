@@ -39,10 +39,16 @@ namespace WindowsFormsApp
                 MessageBox.Show("摄像头打开失败.");
                 return;
             }
-            // 设置采集的图像尺寸为：640*480
-            Cap.Set(CaptureProperty.FrameWidth, 640);
-            Cap.Set(CaptureProperty.FrameHeight, 480);
-            Cap.Set(CaptureProperty.Exposure, -3); // 曝光
+
+            // opencv3
+            //Cap.Set(CaptureProperty.FrameWidth, 640); // 设置采集的图像尺寸为：640*480
+            //Cap.Set(CaptureProperty.FrameHeight, 480); // 设置采集的图像尺寸为：640*480
+            //Cap.Set(CaptureProperty.Exposure, -3); // 曝光
+
+            // opencv4
+            Cap.Set(VideoCaptureProperties.FrameWidth, 640); // 设置采集的图像尺寸为：640*480
+            Cap.Set(VideoCaptureProperties.FrameHeight, 480); // 设置采集的图像尺寸为：640*480
+            Cap.Set(VideoCaptureProperties.Exposure, -3); // 曝光
 
             Mat frame = new Mat();
             var window = new Window("frame");
@@ -77,7 +83,9 @@ namespace WindowsFormsApp
             Cv2.EqualizeHist(frame_gray, frame_gray);
 
             // 人脸检测
-            Rect[] faces = face_cascade.DetectMultiScale(frame_gray, 1.1, 2, 0 | HaarDetectionType.ScaleImage, new Size(30, 30));
+            // opencv3：HaarDetectionType.ScaleImage
+            // opencv4：HaarDetectionTypes.ScaleImage
+            Rect[] faces = face_cascade.DetectMultiScale(frame_gray, 1.1, 2, 0 | HaarDetectionTypes.ScaleImage, new Size(30, 30));
             for (int i = 0; i < faces.Length; i++)
             {
                 // 绘制脸部区域
@@ -88,7 +96,7 @@ namespace WindowsFormsApp
                 Mat faceROI = new Mat(frame_gray, faces[i]);
                 Cv2.ImShow("faceROI", faceROI);
 
-                Rect[] eyes = eyes_cascade.DetectMultiScale(faceROI, 1.1, 2, 0 | HaarDetectionType.ScaleImage, new Size(30, 30));
+                Rect[] eyes = eyes_cascade.DetectMultiScale(faceROI, 1.1, 2, 0 | HaarDetectionTypes.ScaleImage, new Size(30, 30));
                 for (int j = 0; j < eyes.Length; j++)
                 {
                     Point eye_center = new Point() { X = (faces[i].X + eyes[j].X + eyes[j].Width / 2), Y = (faces[i].Y + eyes[j].Y + eyes[j].Height / 2) };
