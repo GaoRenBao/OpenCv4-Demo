@@ -130,3 +130,8 @@ OpenCv4 demo C#/C++/Python 三合一版本
 【OpenCv基础】第63讲 LUT 图像灰度调整
 
 【OpenCv基础】第64讲 离散傅里叶变换
+
+【OpenCv基础】第65讲 ORB算法描述与匹配（Python版本未调通）
+
+【OpenCv基础】第66讲 双目摄像头与图像拼接
+
