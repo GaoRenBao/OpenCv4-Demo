@@ -3,6 +3,8 @@ OpenCv4 demo C#/C++/Python 三合一版本
 
 官方演示地址：http://www.bilibili996.com/Course/article_list?id=20224789774006
 
+【OpenCv基础】第0.9讲 创建画布
+
 【OpenCv基础】第1讲 打开一张图片
 
 【OpenCv基础】第2讲 利用imwrite生成透明png图像
@@ -135,3 +137,4 @@ OpenCv4 demo C#/C++/Python 三合一版本
 
 【OpenCv基础】第66讲 双目摄像头与图像拼接
 
+【OpenCv基础】第67讲 OpenCv图像亮度检测
