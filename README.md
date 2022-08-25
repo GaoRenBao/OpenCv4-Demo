@@ -43,6 +43,8 @@ OpenCv4 demo C#/C++/Python 三合一版本
 
 【OpenCv基础】第17讲 用OpenCV进行基本绘图
 
+【OpenCv基础】第17.1讲 绘图函数
+
 【OpenCv基础】第18讲 多通道图像混合
 
 【OpenCv基础】第19讲 图像的亮度、对比度调整
