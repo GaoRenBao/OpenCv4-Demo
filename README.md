@@ -21,11 +21,15 @@ OpenCv4 demo C#/C++/Python 三合一版本
 
 【OpenCv基础】第8讲 Scharr滤波器
 
+【OpenCv基础】第8.1讲 程序性能检测及优化
+
 【OpenCv基础】第9讲 播放视频
 
 【OpenCv基础】第10讲 调用摄像头进行录像与播放
 
 【OpenCv基础】第10.1讲 视频操作与图像相识度检测
+
+【OpenCv基础】第10.2讲 颜色空间转换与物体追踪
 
 【OpenCv基础】第11讲 彩色目标追踪
 
@@ -45,6 +49,12 @@ OpenCv4 demo C#/C++/Python 三合一版本
 
 【OpenCv基础】第17.1讲 绘图函数
 
+【OpenCv基础】第17.2讲 把鼠标当画笔
+
+【OpenCv基础】第17.3讲 用滑动条做调色板
+
+【OpenCv基础】第17.4讲 图像的基础操作
+
 【OpenCv基础】第18讲 多通道图像混合
 
 【OpenCv基础】第19讲 图像的亮度、对比度调整
@@ -52,6 +62,8 @@ OpenCv4 demo C#/C++/Python 三合一版本
 【OpenCv基础】第20讲 XML和YAMl文件的写入
 
 【OpenCv基础】第21讲 XML和YAMl文件的读取
+
+【OpenCv基础】第21.5讲 卷积
 
 【OpenCv基础】第22讲 三种线性滤波
 
@@ -66,6 +78,8 @@ OpenCv4 demo C#/C++/Python 三合一版本
 【OpenCv基础】第27讲 图像缩放与图像金字塔
 
 【OpenCv基础】第28讲 二值化基本阈值操作
+
+【OpenCv基础】第28.1讲 图像阈值
 
 【OpenCv基础】第29讲 Laplacian图像变换（拉普拉斯算子）
 
