@@ -1,4 +1,12 @@
-﻿using OpenCvSharp;
+﻿/*
+OpenCv版本 OpenCvSharp4.4.8.0.20230708
+内容：摄像头录像与播放
+博客：http://www.bilibili996.com/Course?id=4722430000047
+作者：高仁宝
+时间：2023.11
+*/
+
+using OpenCvSharp;
 using OpenCvSharp.Extensions;
 using System;
 using System.Windows.Forms;

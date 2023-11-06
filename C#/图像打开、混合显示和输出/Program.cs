@@ -1,6 +1,7 @@
 ﻿/*
 OpenCv版本 OpenCvSharp4.4.8.0.20230708
-博客：http://www.bilibili996.com/Course/article_list?id=20224789774006
+内容：图像打开、混合显示和输出
+博客：http://www.bilibili996.com/Course?id=4335202000004
 作者：高仁宝
 时间：2023.11
 */

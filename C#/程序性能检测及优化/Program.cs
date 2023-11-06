@@ -1,6 +1,7 @@
 ﻿/*
 OpenCv版本 OpenCvSharp4.4.8.0.20230708
-博客：http://www.bilibili996.com/Course/article_list?id=20224789774006
+内容：程序性能检测及优化
+博客：http://www.bilibili996.com/Course?id=2284309000315
 作者：高仁宝
 时间：2023.11
 */

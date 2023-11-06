@@ -5,8 +5,6 @@ VisualStudioVersion = 17.5.33502.453
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "blur图像模糊（均值滤波）", "blur图像模糊(均值滤波)\blur图像模糊（均值滤波）.csproj", "{FA2BB14A-66D7-44C2-A111-796F4650FE82}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "支持向量机之SVM引导（二）", "支持向量机之SVM引导（二）\支持向量机之SVM引导（二）.csproj", "{66172529-2642-4988-BD9E-75AB37155ACD}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BRIEF描述符", "BRIEF描述符\BRIEF描述符.csproj", "{5991DF13-4B52-49D2-A821-00C087DDE427}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "canny边缘检测", "canny边缘检测\canny边缘检测.csproj", "{11C038DF-9B52-4F17-B208-196F716BD81E}"
@@ -183,11 +181,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "一维直方图的绘制", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "用OpenCV进行基本绘图", "用OpenCV进行基本绘图\用OpenCV进行基本绘图.csproj", "{708B5556-6AC2-4392-87B2-50134F9D614F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "用光流法进行运动目标检测", "用光流法进行运动目标检测\用光流法进行运动目标检测.csproj", "{D5243D44-CADB-417B-AD48-04721C60BB3B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "光流法运动目标检测", "用光流法进行运动目标检测\光流法运动目标检测.csproj", "{D5243D44-CADB-417B-AD48-04721C60BB3B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "用滑动条做调色板", "用滑动条做调色板\用滑动条做调色板.csproj", "{B0731167-CCC6-42E5-BF23-862000497CAB}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "支持向量机之SVM引导（一）", "支持向量机之SVM引导（一）\支持向量机之SVM引导（一）.csproj", "{314932BB-D5A0-4F6A-8ACD-79989D73D9F1}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "直方图对比", "直方图对比\直方图对比.csproj", "{C679DE3A-FA7D-4213-870E-47BF0D5F64C8}"
 EndProject
@@ -198,6 +194,10 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "亚像素级角点检测", "亚像素级角点检测\亚像素级角点检测.csproj", "{6D501D28-AC11-4568-99C5-F59D4B3E8745}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "创建包围轮廓的矩形和圆形边界框", "创建包围轮廓的矩形和圆形边界框\创建包围轮廓的矩形和圆形边界框.csproj", "{132C7099-504A-4F31-ACC0-538FDA5BC56C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "支持向量机之SVM引导", "支持向量机之SVM引导\支持向量机之SVM引导.csproj", "{314932BB-D5A0-4F6A-8ACD-79989D73D9F1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "支持向量机之处理线性不可分数据", "支持向量机之处理线性不可分数据\支持向量机之处理线性不可分数据.csproj", "{66172529-2642-4988-BD9E-75AB37155ACD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -215,14 +215,6 @@ Global
 		{FA2BB14A-66D7-44C2-A111-796F4650FE82}.Release|Any CPU.Build.0 = Release|Any CPU
 		{FA2BB14A-66D7-44C2-A111-796F4650FE82}.Release|x64.ActiveCfg = Release|Any CPU
 		{FA2BB14A-66D7-44C2-A111-796F4650FE82}.Release|x64.Build.0 = Release|Any CPU
-		{66172529-2642-4988-BD9E-75AB37155ACD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{66172529-2642-4988-BD9E-75AB37155ACD}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{66172529-2642-4988-BD9E-75AB37155ACD}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{66172529-2642-4988-BD9E-75AB37155ACD}.Debug|x64.Build.0 = Debug|Any CPU
-		{66172529-2642-4988-BD9E-75AB37155ACD}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{66172529-2642-4988-BD9E-75AB37155ACD}.Release|Any CPU.Build.0 = Release|Any CPU
-		{66172529-2642-4988-BD9E-75AB37155ACD}.Release|x64.ActiveCfg = Release|Any CPU
-		{66172529-2642-4988-BD9E-75AB37155ACD}.Release|x64.Build.0 = Release|Any CPU
 		{5991DF13-4B52-49D2-A821-00C087DDE427}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{5991DF13-4B52-49D2-A821-00C087DDE427}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5991DF13-4B52-49D2-A821-00C087DDE427}.Debug|x64.ActiveCfg = Debug|Any CPU
@@ -943,14 +935,6 @@ Global
 		{B0731167-CCC6-42E5-BF23-862000497CAB}.Release|Any CPU.Build.0 = Release|Any CPU
 		{B0731167-CCC6-42E5-BF23-862000497CAB}.Release|x64.ActiveCfg = Release|Any CPU
 		{B0731167-CCC6-42E5-BF23-862000497CAB}.Release|x64.Build.0 = Release|Any CPU
-		{314932BB-D5A0-4F6A-8ACD-79989D73D9F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{314932BB-D5A0-4F6A-8ACD-79989D73D9F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{314932BB-D5A0-4F6A-8ACD-79989D73D9F1}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{314932BB-D5A0-4F6A-8ACD-79989D73D9F1}.Debug|x64.Build.0 = Debug|Any CPU
-		{314932BB-D5A0-4F6A-8ACD-79989D73D9F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{314932BB-D5A0-4F6A-8ACD-79989D73D9F1}.Release|Any CPU.Build.0 = Release|Any CPU
-		{314932BB-D5A0-4F6A-8ACD-79989D73D9F1}.Release|x64.ActiveCfg = Release|Any CPU
-		{314932BB-D5A0-4F6A-8ACD-79989D73D9F1}.Release|x64.Build.0 = Release|Any CPU
 		{C679DE3A-FA7D-4213-870E-47BF0D5F64C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{C679DE3A-FA7D-4213-870E-47BF0D5F64C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C679DE3A-FA7D-4213-870E-47BF0D5F64C8}.Debug|x64.ActiveCfg = Debug|Any CPU
@@ -991,6 +975,22 @@ Global
 		{132C7099-504A-4F31-ACC0-538FDA5BC56C}.Release|Any CPU.Build.0 = Release|Any CPU
 		{132C7099-504A-4F31-ACC0-538FDA5BC56C}.Release|x64.ActiveCfg = Release|Any CPU
 		{132C7099-504A-4F31-ACC0-538FDA5BC56C}.Release|x64.Build.0 = Release|Any CPU
+		{314932BB-D5A0-4F6A-8ACD-79989D73D9F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{314932BB-D5A0-4F6A-8ACD-79989D73D9F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{314932BB-D5A0-4F6A-8ACD-79989D73D9F1}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{314932BB-D5A0-4F6A-8ACD-79989D73D9F1}.Debug|x64.Build.0 = Debug|Any CPU
+		{314932BB-D5A0-4F6A-8ACD-79989D73D9F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{314932BB-D5A0-4F6A-8ACD-79989D73D9F1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{314932BB-D5A0-4F6A-8ACD-79989D73D9F1}.Release|x64.ActiveCfg = Release|Any CPU
+		{314932BB-D5A0-4F6A-8ACD-79989D73D9F1}.Release|x64.Build.0 = Release|Any CPU
+		{66172529-2642-4988-BD9E-75AB37155ACD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{66172529-2642-4988-BD9E-75AB37155ACD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{66172529-2642-4988-BD9E-75AB37155ACD}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{66172529-2642-4988-BD9E-75AB37155ACD}.Debug|x64.Build.0 = Debug|Any CPU
+		{66172529-2642-4988-BD9E-75AB37155ACD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{66172529-2642-4988-BD9E-75AB37155ACD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{66172529-2642-4988-BD9E-75AB37155ACD}.Release|x64.ActiveCfg = Release|Any CPU
+		{66172529-2642-4988-BD9E-75AB37155ACD}.Release|x64.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

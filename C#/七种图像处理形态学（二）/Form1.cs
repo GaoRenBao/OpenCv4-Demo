@@ -1,4 +1,12 @@
-﻿using OpenCvSharp;
+﻿/*
+OpenCv版本 OpenCvSharp4.4.8.0.20230708
+内容：7种图像处理形态学（2）
+博客：http://www.bilibili996.com/Course?id=5411139000128
+作者：高仁宝
+时间：2023.11
+*/
+
+using OpenCvSharp;
 using System;
 using System.Threading.Tasks;
 using System.Windows.Forms;

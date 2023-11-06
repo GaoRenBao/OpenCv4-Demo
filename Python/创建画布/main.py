@@ -1,5 +1,6 @@
 # OpenCv版本 OpenCvSharp4.6.0.66
-# 博客：http://www.bilibili996.com/Course/article_list?id=20224789774006
+# 内容：创建画布
+# 博客：http://www.bilibili996.com/Course?id=4082690000247
 # 作者：高仁宝
 # 时间：2023.11
 
