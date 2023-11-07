@@ -1,13 +1,12 @@
 ﻿/*
 OpenCv版本 OpenCvSharp4.4.8.0.20230708
-博客：http://www.bilibili996.com/Course/article_list?id=20224789774006
+内容：霍夫变换HoughLinesP边缘检测与线性矢量
+博客：http://www.bilibili996.com/Course?id=3646528000176
 作者：高仁宝
 时间：2023.11
 */
 
 using OpenCvSharp;
-using OpenCvSharp.Extensions;
-using System;
 
 namespace demo
 {
@@ -37,7 +36,7 @@ namespace demo
             {
                 Point p1 = lines[i].P1;
                 Point p2 = lines[i].P2;
-                Cv2.Line(dstImage, p1, p2, new Scalar(186, 88, 255), 2, LineTypes.AntiAlias);
+                Cv2.Line(dstImage, p1, p2, new Scalar(186, 88, 255), 1, LineTypes.AntiAlias);
             }
 
             //【5】显示原始图  

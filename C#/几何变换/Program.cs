@@ -1,12 +1,12 @@
 ﻿/*
 OpenCv版本 OpenCvSharp4.4.8.0.20230708
-博客：http://www.bilibili996.com/Course/article_list?id=20224789774006
+内容：几何变换
+博客：http://www.bilibili996.com/Course?id=1154656000256
 作者：高仁宝
 时间：2023.11
 */
 
 using OpenCvSharp;
-using OpenCvSharp.Extensions;
 
 namespace demo
 {
@@ -14,10 +14,10 @@ namespace demo
     {
         static void Main(string[] args)
         {
-            //demo1();
+            demo1();
             //demo2();
             //demo3();
-            demo4();
+            //demo4();
         }
 
         #region 图像的平移操作
@@ -49,8 +49,8 @@ namespace demo
         {
             Mat img = Cv2.ImRead("../../../images/messi5.jpg", 0);
             Mat dst = new Mat();
-            Mat rotMat = Cv2.GetRotationMatrix2D(new Point2f(img.Cols / 2, img.Rows / 2), 45, 0.6);
-            Cv2.WarpAffine(img, dst, rotMat, new Size(img.Cols * 2, img.Rows * 2));
+            Mat rotMat = Cv2.GetRotationMatrix2D(new Point2f(img.Cols / 2, img.Rows / 2), 45, 0.5);
+            Cv2.WarpAffine(img, dst, rotMat, new Size(img.Cols, img.Rows));
             Cv2.ImShow("img", dst);
             Cv2.WaitKey(0);
         }
@@ -117,7 +117,7 @@ namespace demo
             Cv2.WarpPerspective(img, dst, M, new Size(300, 300));
 
             Cv2.ImShow("Input", img);
-            Cv2.ImShow("Output", dst);
+            Cv2.ImShow("Output2", dst);
             Cv2.WaitKey(0);
         }
         #endregion

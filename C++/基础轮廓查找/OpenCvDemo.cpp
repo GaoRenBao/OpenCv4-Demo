@@ -1,28 +1,48 @@
 ﻿/*
 OpenCv版本 opencv-4.5.5-vc14_vc15
-博客：http://www.bilibili996.com/Course/article_list?id=20224789774006
+内容：基础轮廓查找
+博客：http://www.bilibili996.com/Course?id=3319137000193
 作者：高仁宝
 时间：2023.11
 */
 
-#include "opencv2/core/core.hpp"
-#include "opencv2/imgproc/imgproc.hpp"
+#include <opencv2/opencv.hpp>
 #include "opencv2/highgui/highgui.hpp"
-#include <iostream>
+#include "opencv2/imgproc/imgproc.hpp"
 
 using namespace cv;
 using namespace std;
 
 int main()
 {
-	// 全黑.可以用在屏保
-	Mat mat(200, 200, CV_8UC3);
-	mat = Scalar::all(0);
-	imshow("black", mat);
+	// 【1】载入原始图，且必须以二值图模式载入
+	Mat srcImage = imread("../images/flowers2.jpg", 0);
+	imshow("原始图", srcImage);
 
-	// 全白
-	mat = Scalar::all(255);
-	imshow("white", mat);
+	//【2】初始化结果图
+	Mat dstImage = Mat::zeros(srcImage.rows, srcImage.cols, CV_8UC3);
+
+	//【3】srcImage取大于阈值119的那部分
+	srcImage = srcImage > 119;
+	imshow("取阈值后的原始图", srcImage);
+
+	//【4】定义轮廓和层次结构
+	vector<vector<Point>> contours;
+	vector<Vec4i> hierarchy;
+
+	//【5】查找轮廓
+	findContours(srcImage, contours, hierarchy, RETR_CCOMP, CHAIN_APPROX_SIMPLE);
+
+	// 【6】遍历所有顶层的轮廓， 以随机颜色绘制出每个连接组件颜色
+	int index = 0;
+	for (; index >= 0; index = hierarchy[index][0])
+	{
+		Scalar color(rand() & 255, rand() & 255, rand() & 255);
+		drawContours(dstImage, contours, index, color, FILLED, 8, hierarchy);
+	}
+
+	//【7】显示最后的轮廓图
+	imshow("轮廓图", dstImage);
+
 	waitKey(0);
-	return 0;
 }
