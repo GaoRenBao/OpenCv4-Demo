@@ -1,6 +1,7 @@
 ﻿/*
 OpenCv版本 OpenCvSharp4.4.8.0.20230708
-博客：http://www.bilibili996.com/Course/article_list?id=20224789774006
+内容：图像缩放与图像金字塔
+博客：http://www.bilibili996.com/Course?id=5486413000167
 作者：高仁宝
 时间：2023.11
 */

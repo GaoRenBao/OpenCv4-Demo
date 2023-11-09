@@ -1,6 +1,7 @@
 ﻿/*
 OpenCv版本 opencv-4.5.5-vc14_vc15
-博客：http://www.bilibili996.com/Course/article_list?id=20224789774006
+内容：打开一张图片
+博客：http://www.bilibili996.com/Course?id=4316440000002
 作者：高仁宝
 时间：2023.11
 */

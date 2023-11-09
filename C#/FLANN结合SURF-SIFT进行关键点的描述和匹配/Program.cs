@@ -1,12 +1,12 @@
 ﻿/*
 OpenCv版本 OpenCvSharp4.4.8.0.20230708
-博客：http://www.bilibili996.com/Course/article_list?id=20224789774006
+内容：FLANN结合SURF/SIFT进行关键点的描述和匹配
+博客：http://www.bilibili996.com/Course?id=3106495000236
 作者：高仁宝
 时间：2023.11
 */
 
 using OpenCvSharp;
-using OpenCvSharp.Extensions;
 using System;
 using System.Collections.Generic;
 
@@ -46,7 +46,8 @@ namespace demo
 
             // 载入源图片
             Mat trainImage = new Mat();
-            Cap.Read(trainImage);
+            for (int i = 0; i < 10; i++)
+                Cap.Read(trainImage);
 
             Mat trainImage_gray = new Mat();
             Cv2.CvtColor(trainImage, trainImage_gray, ColorConversionCodes.BGR2GRAY);
@@ -109,7 +110,9 @@ namespace demo
 
                     // 显示效果图
                     Cv2.ImShow("匹配窗口", dstImage);
-                    Cv2.WaitKey(1);
+                    // 按ESC退出
+                    if (Cv2.WaitKey(10) == 27)
+                        break;
 
                 }
             }
@@ -135,7 +138,8 @@ namespace demo
 
             // 载入源图片
             Mat trainImage = new Mat();
-            Cap.Read(trainImage);
+            for(int i = 0;i<10;i++)
+                Cap.Read(trainImage);
 
             Mat trainImage_gray = new Mat();
             Cv2.CvtColor(trainImage, trainImage_gray, ColorConversionCodes.BGR2GRAY);
@@ -206,8 +210,9 @@ namespace demo
 
                     // 显示效果图
                     Cv2.ImShow("匹配窗口", dstImage);
-                    Cv2.WaitKey(1);
-
+                    // 按ESC退出
+                    if (Cv2.WaitKey(10) == 27)
+                        break;
                 }
             }
         }

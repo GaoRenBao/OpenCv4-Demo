@@ -1,6 +1,7 @@
 ﻿/*
 OpenCv版本 OpenCvSharp4.4.8.0.20230708
-博客：http://www.bilibili996.com/Course/article_list?id=20224789774006
+内容：分水岭算法
+博客：http://www.bilibili996.com/Course?id=3482873000211
 作者：高仁宝
 时间：2023.11
 */
@@ -73,6 +74,10 @@ namespace demo
             {
                 //获取键值
                 int c = Cv2.WaitKey(0);
+
+                // 若按键键值为ESC时，退出
+                if ((char)c == 27)
+                    break;
 
                 //按键键值为2时，恢复源图
                 if ((char)c == '2')

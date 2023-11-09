@@ -1,6 +1,7 @@
 ﻿/*
 OpenCv版本 OpenCvSharp4.4.8.0.20230708
-博客：http://www.bilibili996.com/Course/article_list?id=20224789774006
+内容：BRIEF描述符
+博客：http://www.bilibili996.com/Course?id=c0c16b9f18ad4b5da127eb7792333229
 作者：高仁宝
 时间：2023.11
 */

@@ -1,0 +1,36 @@
+calibrationDate: 1699262136.9753046
+cameraMatrix: !!python/object/apply:numpy.core.multiarray._reconstruct
+  args:
+  - !!python/name:numpy.ndarray ''
+  - !!python/tuple
+    - 0
+  - !!binary |
+    Yg==
+  state: !!python/tuple
+  - 1
+  - !!python/tuple
+    - 3
+    - 3
+    - 4
+  - !!python/object/apply:numpy.dtype
+    args:
+    - u1
+    - false
+    - true
+    state: !!python/tuple
+    - 3
+    - '|'
+    - null
+    - null
+    - null
+    - -1
+    - -1
+    - 0
+  - false
+  - !!binary |
+    ////////qtT//1Wq/6r/1P+qqqr/qlV//1X/qv9Vqn//VVVV
+features:
+  lbp: 228
+  x: 182
+  y: 209
+frameCount: 5

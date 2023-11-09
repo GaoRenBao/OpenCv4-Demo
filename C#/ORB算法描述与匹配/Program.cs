@@ -1,6 +1,7 @@
 ﻿/*
 OpenCv版本 OpenCvSharp4.4.8.0.20230708
-博客：http://www.bilibili996.com/Course/article_list?id=20224789774006
+内容：ORB算法描述与匹配
+博客：http://www.bilibili996.com/Course?id=3219392000243
 作者：高仁宝
 时间：2023.11
 */
@@ -198,7 +199,10 @@ namespace demo
                 // 显示效果图
                 Cv2.Resize(resultImage, resultImage, new Size(resultImage.Cols * 0.5, resultImage.Rows * 0.5), 0, 0, InterpolationFlags.Area);
                 Cv2.ImShow("匹配窗口", resultImage);
-                Cv2.WaitKey(1);
+
+                // 按下ESC键，则程序退出
+                if ((char)Cv2.WaitKey(1) == 27) 
+                    break;
             }
         }
     }

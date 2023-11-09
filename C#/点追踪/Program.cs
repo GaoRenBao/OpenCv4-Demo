@@ -1,6 +1,7 @@
 ﻿/*
 OpenCv版本 OpenCvSharp4.4.8.0.20230708
-博客：http://www.bilibili996.com/Course/article_list?id=20224789774006
+内容：点追踪
+博客：http://www.bilibili996.com/Course?id=4954326000071
 作者：高仁宝
 时间：2023.11
 */
@@ -32,9 +33,9 @@ namespace demo
                 return;
             }
             // 设置采集的图像尺寸为：640*480
-            Cap.Set(VideoCaptureProperties.FrameWidth, 640);
-            Cap.Set(VideoCaptureProperties.FrameHeight, 480);
-            Cap.Set(VideoCaptureProperties.Exposure, -3); // 曝光
+            //Cap.Set(VideoCaptureProperties.FrameWidth, 640);
+            //Cap.Set(VideoCaptureProperties.FrameHeight, 480);
+            //Cap.Set(VideoCaptureProperties.Exposure, -3); // 曝光
 
             Mat frame = new Mat();
             Mat image = new Mat();

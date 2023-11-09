@@ -1,6 +1,7 @@
 ﻿/*
 OpenCv版本 OpenCvSharp4.4.8.0.20230708
-博客：http://www.bilibili996.com/Course/article_list?id=20224789774006
+内容：颜色识别
+博客：http://www.bilibili996.com/Course?id=0177963000226
 作者：高仁宝
 时间：2023.11
 */
@@ -49,6 +50,9 @@ namespace demo
             return des1 + des2;
         }
 
+        /// <summary>
+        /// 黄色识别
+        /// </summary>
         static void demo1()
         {
             Mat g_srcImage = Cv2.ImRead("../../../images/color.jpg");
@@ -62,6 +66,9 @@ namespace demo
             Cv2.ImShow("demo1", des);
         }
 
+        /// <summary>
+        /// 红色识别
+        /// </summary>
         static void demo2()
         {
             Mat g_srcImage = Cv2.ImRead("../../../images/color.jpg");

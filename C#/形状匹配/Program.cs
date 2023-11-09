@@ -1,6 +1,7 @@
 ﻿/*
 OpenCv版本 OpenCvSharp4.4.8.0.20230708
-博客：http://www.bilibili996.com/Course/article_list?id=20224789774006
+内容：形状匹配
+博客：http://www.bilibili996.com/Course?id=0930272000264
 作者：高仁宝
 时间：2023.11
 */
@@ -15,7 +16,7 @@ namespace demo
         static void Main(string[] args)
         {
             Mat img1 = Cv2.ImRead("../../../images/star.jpg", 0);
-            //Mat img2 = Cv2.ImRead("image/star_b.jpg",0);
+            //Mat img2 = Cv2.ImRead("../../../images/star_b.jpg",0);
             Mat img2 = Cv2.ImRead("../../../images/star_c.jpg", 0);
 
             Cv2.ImShow("img1", img1);

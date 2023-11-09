@@ -1,6 +1,7 @@
 ﻿/*
 OpenCv版本 OpenCvSharp4.4.8.0.20230708
-博客：http://www.bilibili996.com/Course/article_list?id=20224789774006
+内容：创建包围轮廓的圆形边
+博客：http://www.bilibili996.com/Course?id=3929903000204
 作者：高仁宝
 时间：2023.11
 */

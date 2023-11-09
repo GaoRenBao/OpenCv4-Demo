@@ -1,6 +1,7 @@
 ﻿/*
 OpenCv版本 OpenCvSharp4.4.8.0.20230708
-博客：http://www.bilibili996.com/Course/article_list?id=20224789774006
+内容：目标查找与跟踪 - Meanshift与CamShift
+博客：http://www.bilibili996.com/Course?id=0699ef6cd6e1407bbfb39a5e39b81e9a
 作者：高仁宝
 时间：2023.11
 */
@@ -84,6 +85,7 @@ namespace demo
                 Cv2.Line(img2, (Point)line[3], (Point)line[0], new Scalar(0, 0, 255), 2, LineTypes.Link8);
                 Cv2.ImShow("img2", img2);
 
+                // 按ESC退出
                 if (Cv2.WaitKey(30) == 27)
                     break;
             }

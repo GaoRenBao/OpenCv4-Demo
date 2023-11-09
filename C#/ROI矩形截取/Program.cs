@@ -1,12 +1,12 @@
 ﻿/*
 OpenCv版本 OpenCvSharp4.4.8.0.20230708
-博客：http://www.bilibili996.com/Course/article_list?id=20224789774006
+内容：ROI矩形截取
+博客：http://www.bilibili996.com/Course?id=db851d3a71c7471ab0bb11ca4d19e650
 作者：高仁宝
 时间：2023.11
 */
 
 using OpenCvSharp;
-using OpenCvSharp.Extensions;
 
 namespace demo
 {
@@ -14,7 +14,7 @@ namespace demo
     {
         static void Main(string[] args)
         {
-            Mat img = Cv2.ImRead("../../../images/orange.jpg");
+            Mat img = Cv2.ImRead("../../../images/messi5.jpg");
             // 设置需要裁剪的轮廓
             Rect rect = new Rect()
             {

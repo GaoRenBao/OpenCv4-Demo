@@ -1,6 +1,7 @@
 ﻿/*
 OpenCv版本 OpenCvSharp4.4.8.0.20230708
-博客：http://www.bilibili996.com/Course/article_list?id=20224789774006
+内容：多对象模板匹配
+博客：http://www.bilibili996.com/Course?id=bd204811ae5949549f1a2fbeedaeb470
 作者：高仁宝
 时间：2023.11
 */

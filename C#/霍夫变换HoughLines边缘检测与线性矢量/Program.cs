@@ -1,12 +1,12 @@
 ﻿/*
 OpenCv版本 OpenCvSharp4.4.8.0.20230708
-博客：http://www.bilibili996.com/Course/article_list?id=20224789774006
+内容：霍夫变换HoughLines边缘检测与线性矢量
+博客：http://www.bilibili996.com/Course?id=3905534000171
 作者：高仁宝
 时间：2023.11
 */
 
 using OpenCvSharp;
-using OpenCvSharp.Extensions;
 using System;
 
 namespace demo
@@ -16,7 +16,7 @@ namespace demo
         static void Main(string[] args)
         {
             //【1】载入原始图和Mat变量定义   
-            Mat srcImage = Cv2.ImRead("../../../images/home.jpg"); 
+            Mat srcImage = Cv2.ImRead("../../../images/home.jpg");
 
             //临时变量和目标图的定义
             Mat midImage = new Mat();
