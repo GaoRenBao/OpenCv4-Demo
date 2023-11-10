@@ -16,32 +16,36 @@ using namespace std;
 
 int main()
 {
-    //【0】载入源图，显示并转化为灰度图
-    Mat srcImage = imread("1.jpg");
+    //【0】初始化视频采集对象
+    VideoCapture cap(0);
+    // 判断摄像头是否成功打开
+    if (!cap.isOpened())
+    {
+        cout << "摄像头打开失败"  << endl;
+        return 0;
+    }
+    Mat srcImage;
+    cap >> srcImage;
+    //【1】载入源图，显示并转化为灰度图
+    //Mat srcImage = imread("1.jpg");
     imshow("原始图", srcImage);
     Mat grayImage;
     cvtColor(srcImage, grayImage, COLOR_BGR2GRAY);
 
     //------------------检测ORB特征点并在图像中提取物体的描述符----------------------
-
-    //【1】参数定义
+    //【2】参数定义
     Ptr<ORB> featureDetector = ORB::create();
     vector<KeyPoint> keyPoints;
     Mat descriptors;
 
-    //【2】调用detect函数检测出特征关键点，保存在vector容器中
+    //【3】调用detect函数检测出特征关键点，保存在vector容器中
     featureDetector->detect(grayImage, keyPoints);
 
-    //【3】计算描述符（特征向量）
+    //【4】计算描述符（特征向量）
     featureDetector->compute(grayImage, keyPoints, descriptors);
 
-    //【4】基于FLANN的描述符对象匹配
+    //【5】基于FLANN的描述符对象匹配
     flann::Index flannIndex(descriptors, flann::LshIndexParams(12, 20, 2), cvflann::FLANN_DIST_HAMMING);
-
-    //【5】初始化视频采集对象
-    VideoCapture cap(0);
-
-    unsigned int frameCount = 0;//帧数
 
     //【6】轮询，直到按下ESC键退出循环
     while (1)

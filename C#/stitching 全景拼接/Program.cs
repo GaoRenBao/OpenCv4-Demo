@@ -1,6 +1,7 @@
 ﻿/*
 OpenCv版本 OpenCvSharp4.4.8.0.20230708
-博客：http://www.bilibili996.com/Course/article_list?id=20224789774006
+内容：stitching 全景拼接
+博客：http://www.bilibili996.com/Course?id=3291377000366
 作者：高仁宝
 时间：2023.11
 */
@@ -20,6 +21,9 @@ namespace demo
             Cv2.WaitKey(0);
         }
 
+        /// <summary>
+        /// 全景拼接，去掉黑边
+        /// </summary>
         private static void stitch1()
         {
             List<Mat> imgs = new List<Mat>();
@@ -83,6 +87,9 @@ namespace demo
             Cv2.ImShow("result1", stitched);
         }
 
+        /// <summary>
+        /// 全景拼接，没去黑边
+        /// </summary>
         private static void stitch2()
         {
             List<Mat> imgs = new List<Mat>();

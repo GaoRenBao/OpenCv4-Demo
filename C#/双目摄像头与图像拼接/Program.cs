@@ -1,6 +1,7 @@
 ﻿/*
 OpenCv版本 OpenCvSharp4.4.8.0.20230708
-博客：http://www.bilibili996.com/Course/article_list?id=20224789774006
+内容：双目摄像头与图像拼接
+博客：http://www.bilibili996.com/Course?id=1048651000244
 作者：高仁宝
 时间：2023.11
 */
@@ -27,7 +28,7 @@ namespace demo
         }
 
         /// <summary>
-        /// 调用摄像头
+        /// 调用双目摄像头
         /// </summary>
         private static void demo1()
         {
@@ -55,7 +56,7 @@ namespace demo
                 {
                     Cv2.Resize(Image, Image, new Size(Image.Cols * 0.5, Image.Rows * 0.5), 0, 0, InterpolationFlags.Area);
 
-                    // 提取轮廓
+                    // 将双目摄像头读取到的图像裁剪成左右两张图
                     Rect faces1 = new Rect()
                     {
                         X = 0,
@@ -75,7 +76,7 @@ namespace demo
                     Cv2.ImShow("img_1", img_1);
                     Cv2.ImShow("img_2", img_2);
 
-
+                    // 对两张图像进行图像拼接
                     images = new List<Mat>() { img_2, img_1 };
                     stitcher = Stitcher.Create(Mode.Scans);
                     if (stitcher.Stitch(images, panoMat) != Stitcher.Status.OK)
