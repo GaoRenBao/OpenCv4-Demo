@@ -167,8 +167,6 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "图像修补", "图像修�
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "椭圆拟合与直线拟合", "椭圆拟合与直线拟合\椭圆拟合与直线拟合.vcxproj", "{5A7ED71F-BD5A-4670-8C12-83964A47D2A4}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "向量延长线上的像素扫描", "向量延长线上的像素扫描\向量延长线上的像素扫描.vcxproj", "{4A71F631-F468-4369-B7A1-71F9A6490399}"
-EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "形状匹配", "形状匹配\形状匹配.vcxproj", "{F02FE6AC-A47D-4AB6-9F49-C6429FB43779}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "寻找已知物体（二）", "寻找已知物体（二）\寻找已知物体（二）.vcxproj", "{81C46341-1DB5-47F5-BE12-C1044AECCE12}"
@@ -863,14 +861,6 @@ Global
 		{5A7ED71F-BD5A-4670-8C12-83964A47D2A4}.Release|x64.Build.0 = Release|x64
 		{5A7ED71F-BD5A-4670-8C12-83964A47D2A4}.Release|x86.ActiveCfg = Release|Win32
 		{5A7ED71F-BD5A-4670-8C12-83964A47D2A4}.Release|x86.Build.0 = Release|Win32
-		{4A71F631-F468-4369-B7A1-71F9A6490399}.Debug|x64.ActiveCfg = Debug|x64
-		{4A71F631-F468-4369-B7A1-71F9A6490399}.Debug|x64.Build.0 = Debug|x64
-		{4A71F631-F468-4369-B7A1-71F9A6490399}.Debug|x86.ActiveCfg = Debug|Win32
-		{4A71F631-F468-4369-B7A1-71F9A6490399}.Debug|x86.Build.0 = Debug|Win32
-		{4A71F631-F468-4369-B7A1-71F9A6490399}.Release|x64.ActiveCfg = Release|x64
-		{4A71F631-F468-4369-B7A1-71F9A6490399}.Release|x64.Build.0 = Release|x64
-		{4A71F631-F468-4369-B7A1-71F9A6490399}.Release|x86.ActiveCfg = Release|Win32
-		{4A71F631-F468-4369-B7A1-71F9A6490399}.Release|x86.Build.0 = Release|Win32
 		{F02FE6AC-A47D-4AB6-9F49-C6429FB43779}.Debug|x64.ActiveCfg = Debug|x64
 		{F02FE6AC-A47D-4AB6-9F49-C6429FB43779}.Debug|x64.Build.0 = Debug|x64
 		{F02FE6AC-A47D-4AB6-9F49-C6429FB43779}.Debug|x86.ActiveCfg = Debug|Win32

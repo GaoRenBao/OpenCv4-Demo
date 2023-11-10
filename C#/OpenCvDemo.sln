@@ -157,8 +157,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "图像修补", "图像修�
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "椭圆拟合与直线拟合", "椭圆拟合与直线拟合\椭圆拟合与直线拟合.csproj", "{AF01534B-9A70-4CE6-B317-1C41C99DC67A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "向量延长线上的像素扫描", "向量延长线上的像素扫描\向量延长线上的像素扫描.csproj", "{D0C2D773-A534-476D-8A74-17F40A790206}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "形状匹配", "形状匹配\形状匹配.csproj", "{DB2667CD-C228-4538-9CC5-CED933FCBA6F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "寻找已知物体（二）", "寻找已知物体（二）\寻找已知物体（二）.csproj", "{4D491BA4-2EE1-4D6E-AFDE-17FDCBFED9BF}"
@@ -823,14 +821,6 @@ Global
 		{AF01534B-9A70-4CE6-B317-1C41C99DC67A}.Release|Any CPU.Build.0 = Release|Any CPU
 		{AF01534B-9A70-4CE6-B317-1C41C99DC67A}.Release|x64.ActiveCfg = Release|Any CPU
 		{AF01534B-9A70-4CE6-B317-1C41C99DC67A}.Release|x64.Build.0 = Release|Any CPU
-		{D0C2D773-A534-476D-8A74-17F40A790206}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D0C2D773-A534-476D-8A74-17F40A790206}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D0C2D773-A534-476D-8A74-17F40A790206}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{D0C2D773-A534-476D-8A74-17F40A790206}.Debug|x64.Build.0 = Debug|Any CPU
-		{D0C2D773-A534-476D-8A74-17F40A790206}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D0C2D773-A534-476D-8A74-17F40A790206}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D0C2D773-A534-476D-8A74-17F40A790206}.Release|x64.ActiveCfg = Release|Any CPU
-		{D0C2D773-A534-476D-8A74-17F40A790206}.Release|x64.Build.0 = Release|Any CPU
 		{DB2667CD-C228-4538-9CC5-CED933FCBA6F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{DB2667CD-C228-4538-9CC5-CED933FCBA6F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DB2667CD-C228-4538-9CC5-CED933FCBA6F}.Debug|x64.ActiveCfg = Debug|Any CPU
