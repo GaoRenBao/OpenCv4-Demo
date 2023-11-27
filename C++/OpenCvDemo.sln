@@ -209,6 +209,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "姿势估计", "姿势估�
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "立体图像中的深度地图", "立体图像中的深度地图\立体图像中的深度地图.vcxproj", "{A70A6654-E6CB-486C-9E70-025CB2A15069}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "删除图像中的水印", "删除图像中的水印\删除图像中的水印.vcxproj", "{B8D1C2A4-7826-485A-B36A-0C29089F7A86}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -1041,6 +1043,14 @@ Global
 		{A70A6654-E6CB-486C-9E70-025CB2A15069}.Release|x64.Build.0 = Release|x64
 		{A70A6654-E6CB-486C-9E70-025CB2A15069}.Release|x86.ActiveCfg = Release|Win32
 		{A70A6654-E6CB-486C-9E70-025CB2A15069}.Release|x86.Build.0 = Release|Win32
+		{B8D1C2A4-7826-485A-B36A-0C29089F7A86}.Debug|x64.ActiveCfg = Debug|x64
+		{B8D1C2A4-7826-485A-B36A-0C29089F7A86}.Debug|x64.Build.0 = Debug|x64
+		{B8D1C2A4-7826-485A-B36A-0C29089F7A86}.Debug|x86.ActiveCfg = Debug|Win32
+		{B8D1C2A4-7826-485A-B36A-0C29089F7A86}.Debug|x86.Build.0 = Debug|Win32
+		{B8D1C2A4-7826-485A-B36A-0C29089F7A86}.Release|x64.ActiveCfg = Release|x64
+		{B8D1C2A4-7826-485A-B36A-0C29089F7A86}.Release|x64.Build.0 = Release|x64
+		{B8D1C2A4-7826-485A-B36A-0C29089F7A86}.Release|x86.ActiveCfg = Release|Win32
+		{B8D1C2A4-7826-485A-B36A-0C29089F7A86}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
