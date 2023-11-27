@@ -1,147 +1,93 @@
 # OpenCv版本 OpenCvSharp4.6.0.66
 # 内容：使用SVM进行-手写数据OCR
-# 博客：http://www.bilibili996.com/Course?id=
+# 博客：http://www.bilibili996.com/Course?id=17494cb1802e403ea25d1096a5659478
 # 作者：高仁宝
 # 时间：2023.11
 
-# 跑不了。。。
+# PDF中的代码无法运行。。。
+# 参考博客：https://blog.csdn.net/JJSXBL/article/details/127924492
+
+import cv2 as cv
+import numpy as np
+
+SZ = 20
+bin_n = 16  # Number of bins
+affine_flags = cv.WARP_INVERSE_MAP | cv.INTER_LINEAR
 
 
-# import cv2
-# import numpy as np
-#
-# SZ = 20
-# bin_n = 16  # Number of bins
-# affine_flags = cv2.WARP_INVERSE_MAP | cv2.INTER_LINEAR
-#
-#
-# # 使用方向梯度直方图Histogram of Oriented Gradients  HOG 作为特征向量
-# def deskew(img):
-#     m = cv2.moments(img)
-#     if abs(m['mu02']) < 1e-2:
-#         return img.copy()
-#     skew = m['mu11'] / m['mu02']
-#     M = np.float32([[1, skew, -0.5 * SZ * skew], [0, 1, 0]])
-#     img = cv2.warpAffine(img, M, (SZ, SZ), flags=affine_flags)
-#     return img
-#
-#
-# # 计算图像 X 方向和 Y 方向的 Sobel 导数
-# def hog(img):
-#     gx = cv2.Sobel(img, cv2.CV_32F, 1, 0)
-#     gy = cv2.Sobel(img, cv2.CV_32F, 0, 1)
-#     mag, ang = cv2.cartToPolar(gx, gy)
-#     bins = np.int32(bin_n * ang / (2 * np.pi))  # quantizing binvalues in (0...16)
-#     bin_cells = bins[:10, :10], bins[10:, :10], bins[:10, 10:], bins[10:, 10:]
-#     mag_cells = mag[:10, :10], mag[10:, :10], mag[:10, 10:], mag[10:, 10:]
-#     hists = [np.bincount(b.ravel(), m.ravel(), bin_n) for b, m in zip(bin_cells, mag_cells)]
-#     hist = np.hstack(hists)  # hist is a 64 bit vector
-#     return hist
-#
-#
-# # 最后 和前 一样 我们将大图分割成小图。使用每个数字的前 250 个作 为训练数据
-# #  后 250 个作为测试数据
-# img = cv2.imread('../images/digits.png', 0)
-#
-# cells = [np.hsplit(row, 100) for row in np.vsplit(img, 50)]
-# # First half is trainData, remaining is testData
-# train_cells = [i[:50] for i in cells]
-# test_cells = [i[50:] for i in cells]
-#
-# deskewed = [map(deskew, row) for row in train_cells]
-# # deskewed = [deskew(row) for row in train_cells]
-# # deskewed = map(deskew, train_cells)
-# hogdata = [map(hog, row) for row in deskewed]
-# # hogdata = [hog(row) for row in deskewed]
-# # hogdata = map(hog, deskewed)
-#
-# trainData = np.float32(hogdata).reshape(-1, 64)
-# responses = np.float32(np.repeat(np.arange(10), 250)[:, np.newaxis])
-#
-# svm = cv2.ml.SVM_create()
-# svm.setKernel(cv2.ml.SVM_LINEAR)
-# svm.setType(cv2.ml.SVM_C_SVC)
-# svm.setC(2.67)
-# svm.setGamma(5.383)
-# svm.train(trainData, cv2.ml.ROW_SAMPLE, responses)
-# svm.save('svm_data.dat')
-#
-# deskewed = [map(deskew, row) for row in test_cells]
-# hogdata = [map(hog, row) for row in deskewed]
-# testData = np.float32(hogdata).reshape(-1, bin_n * 4)
-#
-# result = svm.predict(testData)
-# mask = result == responses
-# correct = np.count_nonzero(mask)
-# print(correct * 100.0 / result.size)
-# # 94%
+# 这个函数用来给手写体做一个变形，变成正体
+def deskew(img):
+    m = cv.moments(img)
+    if abs(m['mu02']) < 1e-2:
+        return img.copy()
+    skew = m['mu11'] / m['mu02']
+    M = np.float32([[1, skew, -0.5 * SZ * skew], [0, 1, 0]])
+    img = cv.warpAffine(img, M, (SZ, SZ), flags=affine_flags)
+    return img
 
 
-# import cv2
-# import numpy as np
-#
-# SZ = 20
-# bin_n = 16  # Number of bins
-#
-# svm_params = dict(kernel_type=cv2.SVM_LINEAR, svm_type=cv2.SVM_C_SVC, C=2.67, gamma=5.383)
-#
-# affine_flags = cv2.WARP_INVERSE_MAP | cv2.INTER_LINEAR
-#
-#
-# # 使用方向梯度直方图Histogram of Oriented Gradients  HOG 作为特征向量
-# def deskew(img):
-#     m = cv2.moments(img)
-#     if abs(m['mu02']) < 1e-2:
-#         return img.copy()
-#     skew = m['mu11'] / m['mu02']
-#     M = np.float32([[1, skew, -0.5 * SZ * skew], [0, 1, 0]])
-#     img = cv2.warpAffine(img, M, (SZ, SZ), flags=affine_flags)
-#     return img
-#
-#
-# # 计算图像 X 方向和 Y 方向的 Sobel 导数
-# def hog(img):
-#     gx = cv2.Sobel(img, cv2.CV_32F, 1, 0)
-#     gy = cv2.Sobel(img, cv2.CV_32F, 0, 1)
-#     mag, ang = cv2.cartToPolar(gx, gy)
-#     bins = np.int32(bin_n * ang / (2 * np.pi))  # quantizing binvalues in (0...16)
-#     bin_cells = bins[:10, :10], bins[10:, :10], bins[:10, 10:], bins[10:, 10:]
-#     mag_cells = mag[:10, :10], mag[10:, :10], mag[:10, 10:], mag[10:, 10:]
-#     hists = [np.bincount(b.ravel(), m.ravel(), bin_n) for b, m in zip(bin_cells, mag_cells)]
-#     hist = np.hstack(hists)  # hist is a 64 bit vector
-#     return hist
-#
-#
-# # 最后 和前 一样 我们将大图分割成小图。使用每个数字的前 250 个作 为训练数据
-# #  后 250 个作为测试数据
-# img = cv2.imread('../images/digits.png', 0)
-#
-# cells = [np.hsplit(row, 100) for row in np.vsplit(img, 50)]
-#
-# # First half is trainData, remaining is testData
-# train_cells = [i[:50] for i in cells]
-# test_cells = [i[50:] for i in cells]
-#
-# ######    Now training      ########################
-#
-# deskewed = [map(deskew, row) for row in train_cells]
-# hogdata = [map(hog, row) for row in deskewed]
-# trainData = np.float32(hogdata).reshape(-1, 64)
-# responses = np.float32(np.repeat(np.arange(10), 250)[:, np.newaxis])
-#
-# svm = cv2.SVM()
-# svm.train(trainData, responses, params=svm_params)
-# svm.save('svm_data.dat')
-#
-# ###### Now testing ########################
-#
-# deskewed = [map(deskew, row) for row in test_cells]
-# hogdata = [map(hog, row) for row in deskewed]
-# testData = np.float32(hogdata).reshape(-1, bin_n * 4)
-# result = svm.predict_all(testData)
-#
-# ####### Check Accuracy ########################
-#
-# mask = result == responses
-# correct = np.count_nonzero(mask)
-# print(correct * 100.0 / result.size)
+# 这个函数把图片分成四部分，分别成生成方向直方图，然后返回，用来作为SVM的输入，这点可K近邻算法是不一样的
+def hog(img):
+    gx = cv.Sobel(img, cv.CV_32F, 1, 0)
+    gy = cv.Sobel(img, cv.CV_32F, 0, 1)
+    mag, ang = cv.cartToPolar(gx, gy)
+    bins = np.int32(bin_n * ang / (2 * np.pi))  # quantizing binvalues in (0...16)
+    bin_cells = bins[:10, :10], bins[10:, :10], bins[:10, 10:], bins[10:, 10:]
+    mag_cells = mag[:10, :10], mag[10:, :10], mag[:10, 10:], mag[10:, 10:]
+    hists = [np.bincount(b.ravel(), m.ravel(), bin_n) for b, m in zip(bin_cells, mag_cells)]
+    hist = np.hstack(hists)  # hist is a 64 bit vector
+    return hist
+
+
+# 样本读取
+img = cv.imread(cv.samples.findFile('../images/digits.png'), 0)
+if img is None:
+    raise Exception("we need the digits.png image from samples/data here !")
+
+# 把整张图片分成单独的图片，原数据是50行，100列
+cells = [np.hsplit(row, 100) for row in np.vsplit(img, 50)]
+# First half is trainData, remaining is testData
+train_cells = [i[:50] for i in cells]
+test_cells = [i[50:] for i in cells]
+
+######################## Now training ########################
+
+# 使用deskew函数，把倾斜的字体矫正
+deskewed = [list(map(deskew, row)) for row in train_cells]
+# 生成图像的HOG图
+hogdata = [list(map(hog, row)) for row in deskewed]
+# 序列化，变成输入数据
+trainData = np.float32(hogdata).reshape(-1, 64)
+# 把与图片对应的数字生成出来
+responses = np.repeat(np.arange(10), 250)[:, np.newaxis]
+
+# 实例化对象
+svm = cv.ml.SVM_create()
+# 设置核函数
+svm.setKernel(cv.ml.SVM_LINEAR)
+# 设置训练类型
+svm.setType(cv.ml.SVM_C_SVC)
+svm.setC(2.67)
+svm.setGamma(5.383)
+
+# 输入样本，进行训练
+svm.train(trainData, cv.ml.ROW_SAMPLE, responses)
+# 存储训练结果
+svm.save('svm_data.dat')
+
+######     Now testing      ########################
+
+# 对检验样本的手写体进行矫正
+deskewed = [list(map(deskew, row)) for row in test_cells]
+# 生成检验样本的HOG图
+hogdata = [list(map(hog, row)) for row in deskewed]
+# 检验样本序列化
+testData = np.float32(hogdata).reshape(-1, bin_n * 4)
+# 生成识别结果
+result = svm.predict(testData)[1]
+
+#######   Check Accuracy   ########################
+mask = result == responses
+correct = np.count_nonzero(mask)
+print(correct * 100.0 / result.size)
+# 输出：93.8
