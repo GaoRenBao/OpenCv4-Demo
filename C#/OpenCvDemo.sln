@@ -219,6 +219,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "二维码条形码识别", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "删除图像中的水印", "删除图像中的水印\删除图像中的水印.csproj", "{FAC60EC7-A5B6-4238-839C-5548C94364D8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KNN手写数字识别", "KNN手写数字识别\KNN手写数字识别.csproj", "{CFE24F4F-77AC-4EF7-949B-B39582BD301D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -1525,6 +1527,18 @@ Global
 		{FAC60EC7-A5B6-4238-839C-5548C94364D8}.Release|x64.Build.0 = Release|Any CPU
 		{FAC60EC7-A5B6-4238-839C-5548C94364D8}.Release|x86.ActiveCfg = Release|Any CPU
 		{FAC60EC7-A5B6-4238-839C-5548C94364D8}.Release|x86.Build.0 = Release|Any CPU
+		{CFE24F4F-77AC-4EF7-949B-B39582BD301D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CFE24F4F-77AC-4EF7-949B-B39582BD301D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CFE24F4F-77AC-4EF7-949B-B39582BD301D}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{CFE24F4F-77AC-4EF7-949B-B39582BD301D}.Debug|x64.Build.0 = Debug|Any CPU
+		{CFE24F4F-77AC-4EF7-949B-B39582BD301D}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{CFE24F4F-77AC-4EF7-949B-B39582BD301D}.Debug|x86.Build.0 = Debug|Any CPU
+		{CFE24F4F-77AC-4EF7-949B-B39582BD301D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CFE24F4F-77AC-4EF7-949B-B39582BD301D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CFE24F4F-77AC-4EF7-949B-B39582BD301D}.Release|x64.ActiveCfg = Release|Any CPU
+		{CFE24F4F-77AC-4EF7-949B-B39582BD301D}.Release|x64.Build.0 = Release|Any CPU
+		{CFE24F4F-77AC-4EF7-949B-B39582BD301D}.Release|x86.ActiveCfg = Release|Any CPU
+		{CFE24F4F-77AC-4EF7-949B-B39582BD301D}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
