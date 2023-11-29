@@ -19,7 +19,7 @@ int main()
     Mat im = imread("../images/YZeOg.jpg");
 
     // 原图有点大。。。
-    //resize(im, im, Size(im.cols * 0.5, im.rows * 0.5), (0, 0), (0, 0), 3);
+    resize(im, im, Size(im.cols * 0.5, im.rows * 0.5), (0, 0), (0, 0), 3);
     imshow("im", im);
 
     Mat gr, bg, bw, dark;

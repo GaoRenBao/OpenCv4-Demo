@@ -21,7 +21,7 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{21A98426-2DF0-4D17-96DF-EC84A39A8679}</ProjectGuid>
+    <ProjectGuid>{D2D15604-FE97-420D-920B-73512BD5D587}</ProjectGuid>
     <RootNamespace>OpenCvDemo</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
     <ProjectName>二维码条形码识别</ProjectName>

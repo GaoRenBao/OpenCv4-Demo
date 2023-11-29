@@ -215,7 +215,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "使用Haar分类器之面�
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "使用Haar分类器之行人检测", "使用Haar分类器之行人检测\使用Haar分类器之行人检测.csproj", "{935203CA-C6F9-41B7-BE61-F17E60E2B0B0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "二维码识别", "二维码识别\二维码识别.csproj", "{57E7517D-09D5-4C4B-B744-1DED914A9744}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "二维码条形码识别", "二维码条形码识别\二维码条形码识别.csproj", "{57E7517D-09D5-4C4B-B744-1DED914A9744}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "删除图像中的水印", "删除图像中的水印\删除图像中的水印.csproj", "{FAC60EC7-A5B6-4238-839C-5548C94364D8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -1511,6 +1513,18 @@ Global
 		{57E7517D-09D5-4C4B-B744-1DED914A9744}.Release|x64.Build.0 = Release|Any CPU
 		{57E7517D-09D5-4C4B-B744-1DED914A9744}.Release|x86.ActiveCfg = Release|Any CPU
 		{57E7517D-09D5-4C4B-B744-1DED914A9744}.Release|x86.Build.0 = Release|Any CPU
+		{FAC60EC7-A5B6-4238-839C-5548C94364D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FAC60EC7-A5B6-4238-839C-5548C94364D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FAC60EC7-A5B6-4238-839C-5548C94364D8}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{FAC60EC7-A5B6-4238-839C-5548C94364D8}.Debug|x64.Build.0 = Debug|Any CPU
+		{FAC60EC7-A5B6-4238-839C-5548C94364D8}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{FAC60EC7-A5B6-4238-839C-5548C94364D8}.Debug|x86.Build.0 = Debug|Any CPU
+		{FAC60EC7-A5B6-4238-839C-5548C94364D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FAC60EC7-A5B6-4238-839C-5548C94364D8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FAC60EC7-A5B6-4238-839C-5548C94364D8}.Release|x64.ActiveCfg = Release|Any CPU
+		{FAC60EC7-A5B6-4238-839C-5548C94364D8}.Release|x64.Build.0 = Release|Any CPU
+		{FAC60EC7-A5B6-4238-839C-5548C94364D8}.Release|x86.ActiveCfg = Release|Any CPU
+		{FAC60EC7-A5B6-4238-839C-5548C94364D8}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

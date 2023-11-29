@@ -217,6 +217,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "使用Haar分类器之面�
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "使用Haar分类器之行人检测", "使用Haar分类器之行人检测\使用Haar分类器之行人检测.vcxproj", "{63BD70D9-069A-43D2-A2EF-E07E17BD98F0}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "二维码条形码识别", "二维码条形码识别\二维码条形码识别.vcxproj", "{D2D15604-FE97-420D-920B-73512BD5D587}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -1081,6 +1083,14 @@ Global
 		{63BD70D9-069A-43D2-A2EF-E07E17BD98F0}.Release|x64.Build.0 = Release|x64
 		{63BD70D9-069A-43D2-A2EF-E07E17BD98F0}.Release|x86.ActiveCfg = Release|Win32
 		{63BD70D9-069A-43D2-A2EF-E07E17BD98F0}.Release|x86.Build.0 = Release|Win32
+		{D2D15604-FE97-420D-920B-73512BD5D587}.Debug|x64.ActiveCfg = Debug|x64
+		{D2D15604-FE97-420D-920B-73512BD5D587}.Debug|x64.Build.0 = Debug|x64
+		{D2D15604-FE97-420D-920B-73512BD5D587}.Debug|x86.ActiveCfg = Debug|Win32
+		{D2D15604-FE97-420D-920B-73512BD5D587}.Debug|x86.Build.0 = Debug|Win32
+		{D2D15604-FE97-420D-920B-73512BD5D587}.Release|x64.ActiveCfg = Release|x64
+		{D2D15604-FE97-420D-920B-73512BD5D587}.Release|x64.Build.0 = Release|x64
+		{D2D15604-FE97-420D-920B-73512BD5D587}.Release|x86.ActiveCfg = Release|Win32
+		{D2D15604-FE97-420D-920B-73512BD5D587}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
