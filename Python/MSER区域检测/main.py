@@ -29,7 +29,7 @@ cv2.polylines(vis, hulls, 1, (0, 255, 0))
 img3 = cv2.resize(vis, (img.shape[1], img.shape[0]))
 cv2.namedWindow('img', 0)
 cv2.imshow('img', img3)
-cv2.imwrite('mser-result.jpg', vis)
+# cv2.imwrite('mser-result.jpg', vis)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
 

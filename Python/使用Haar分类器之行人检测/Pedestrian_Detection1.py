@@ -1,6 +1,6 @@
 # OpenCv版本 OpenCvSharp4.6.0.66
-# 内容：对象检测-使用Haar分类器进行面部检测
-# 博客：http://www.bilibili996.com/Course?id=be9bc00c296a4fe59e0c86474bbf9f43
+# 内容：使用Haar分类器之行人检测
+# 博客：http://www.bilibili996.com/Course?id=c6abbd334a724e8696c1165b7b6b558c
 # 作者：高仁宝
 # 时间：2023.11
 
@@ -42,6 +42,7 @@ for imagePath in paths.list_images(args["images"]):
     (rects, weights) = hog.detectMultiScale(image, winStride=(4, 4),
                                             padding=(8, 8), scale=1.05)
 
+    # 置信度 weights 参数并没有被用起来
     # draw the original bounding boxes
     for (x, y, w, h) in rects:
         cv2.rectangle(orig, (x, y), (x + w, y + h), (0, 0, 255), 2)
