@@ -68,6 +68,7 @@ cv2.destroyAllWindows()
 # 标定
 ret, mtx, dist, _, _ = cv2.calibrateCamera(objpoints, imgpoints, gray.shape[::-1], None, None)
 
+#  X、Y、Z三轴方向，占3格
 axis = np.float32([[3, 0, 0], [0, 3, 0], [0, 0, -3]]).reshape(-1, 3)
 # 渲染一个立方体
 # axis = np.float32([[0, 0, 0], [0, 3, 0], [3, 3, 0], [3, 0, 0],

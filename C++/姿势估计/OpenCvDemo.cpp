@@ -111,6 +111,8 @@ int main()
             objPts.push_back(Point3f((float)j, (float)i, (float)0));
         }
     }
+
+    // X、Y、Z三轴方向，占3格
     vector<Point3f> axis;
     axis.push_back(Point3f(3, 0, 0));
     axis.push_back(Point3f(0, 3, 0));

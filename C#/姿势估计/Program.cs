@@ -87,6 +87,7 @@ namespace demo
                 }
             }
 
+            // X、Y、Z三轴方向，占3格
             var axis = new[]
             {
                 new Point3f(3,0,0),
