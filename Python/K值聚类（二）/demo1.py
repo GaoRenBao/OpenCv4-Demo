@@ -7,7 +7,7 @@
 import numpy as np
 import cv2
 
-img = cv2.imread('../images/home.jpg')
+img = cv2.imread('../images/fruits.jpg')
 # img = cv2.imread('../data/opencv_logo.png')
 Z = img.reshape((-1, 3))
 # convert to np.float32
