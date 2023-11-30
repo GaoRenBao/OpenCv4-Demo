@@ -31,7 +31,6 @@ noisy = [np.uint8(np.clip(i, 0, 255)) for i in noisy]
 # Denoise 3rd frame considering all the 5 frames
 dst = cv2.fastNlMeansDenoisingMulti(noisy, 2, 5, None, 4, 7, 35)
 
-
 plt.subplot(131), plt.imshow(gray[2], 'gray')
 plt.subplot(132), plt.imshow(noisy[2], 'gray')
 plt.subplot(133), plt.imshow(dst, 'gray')
