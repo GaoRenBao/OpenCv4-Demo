@@ -1,4 +1,4 @@
-# OpenCv版本 OpenCvSharp4.6.0.66
+# OpenCv版本：opencv-python 4.6.0.66
 # 内容：程序性能检测及优化
 # 博客：http://www.bilibili996.com/Course?id=2284309000315
 # 作者：高仁宝

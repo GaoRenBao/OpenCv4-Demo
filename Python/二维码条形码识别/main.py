@@ -1,4 +1,4 @@
-# OpenCv版本 OpenCvSharp4.6.0.66
+# OpenCv版本：opencv-python 4.6.0.66
 # 内容：识别二维码
 # 博客：http://www.bilibili996.com/Course?id=fd336dddfd3a4ae49603f53bd74550f2
 # 作者：高仁宝

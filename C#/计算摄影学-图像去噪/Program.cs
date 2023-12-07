@@ -1,5 +1,5 @@
 ﻿/*
-OpenCv版本 OpenCvSharp4.4.8.0.20230708
+OpenCv版本 OpenCvSharp 4.4.8.0.20230708
 内容：计算摄影学-图像去噪
 博客：http://www.bilibili996.com/Course?id=4faa3bccc8084d3498b91a610fec4ecb
 作者：高仁宝

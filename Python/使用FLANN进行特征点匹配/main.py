@@ -1,4 +1,4 @@
-# OpenCv版本 OpenCvSharp4.6.0.66
+# OpenCv版本：opencv-python 4.6.0.66
 # 内容：使用FLANN进行特征点匹配
 # 博客：http://www.bilibili996.com/Course?id=1443670000237
 # 作者：高仁宝

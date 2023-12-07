@@ -1,4 +1,4 @@
-# OpenCv版本 OpenCvSharp4.6.0.66
+# OpenCv版本：opencv-python 4.6.0.66
 # 内容：点到多边形的最短距离
 # 博客：http://www.bilibili996.com/Course?id=3657332000262
 # 作者：高仁宝

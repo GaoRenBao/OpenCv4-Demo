@@ -1,4 +1,4 @@
-# OpenCv版本 OpenCvSharp4.6.0.66
+# OpenCv版本：opencv-python 4.6.0.66
 # 内容：摄像机标定
 # 博客：http://www.bilibili996.com/Course?id=3b7dadd95f6a4508867768c07a59db3e
 # 作者：高仁宝

@@ -1,4 +1,4 @@
-# OpenCv版本 OpenCvSharp4.6.0.66
+# OpenCv版本：opencv-python 4.6.0.66
 # 内容：ROI矩形截取
 # 博客：http://www.bilibili996.com/Course?id=db851d3a71c7471ab0bb11ca4d19e650
 # 作者：高仁宝

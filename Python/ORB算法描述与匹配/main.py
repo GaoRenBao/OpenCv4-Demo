@@ -1,4 +1,4 @@
-# OpenCv版本 OpenCvSharp4.6.0.66
+# OpenCv版本：opencv-python 4.6.0.66
 # 内容：ORB算法描述与匹配
 # 博客：http://www.bilibili996.com/Course?id=3219392000243
 # 作者：高仁宝

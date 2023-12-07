@@ -1,5 +1,5 @@
 ﻿/*
-OpenCv版本 OpenCvSharp4.4.8.0.20230708
+OpenCv版本 OpenCvSharp 4.4.8.0.20230708
 内容：使用Haar分类器之行人检测
 博客：http://www.bilibili996.com/Course?id=c6abbd334a724e8696c1165b7b6b558c
 作者：高仁宝

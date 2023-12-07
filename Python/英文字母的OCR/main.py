@@ -1,4 +1,4 @@
-# OpenCv版本 OpenCvSharp4.6.0.66
+# OpenCv版本：opencv-python 4.6.0.66
 # 内容：英文字母的OCR
 # 博客：http://www.bilibili996.com/Course?id=6f064938b1b94d0d940b4f602b5df75d
 # 作者：高仁宝

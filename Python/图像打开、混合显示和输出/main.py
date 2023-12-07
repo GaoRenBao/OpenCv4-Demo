@@ -1,4 +1,4 @@
-# OpenCv版本 OpenCvSharp4.6.0.66
+# OpenCv版本：opencv-python 4.6.0.66
 # 内容：图像打开、混合显示和输出
 # 博客：http://www.bilibili996.com/Course?id=4335202000004
 # 作者：高仁宝

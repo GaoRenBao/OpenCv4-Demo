@@ -1,5 +1,5 @@
 ﻿/*
-OpenCv版本 OpenCvSharp4.4.8.0.20230708
+OpenCv版本 OpenCvSharp 4.4.8.0.20230708
 内容：使用GrabCut算法进行交互式前景提取
 博客：http://www.bilibili996.com/Course?id=ebe8b6e9ef6843f486142989d05d438a
 作者：高仁宝

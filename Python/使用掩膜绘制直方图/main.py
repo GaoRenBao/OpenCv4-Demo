@@ -1,4 +1,4 @@
-# OpenCv版本 OpenCvSharp4.6.0.66
+# OpenCv版本：opencv-python 4.6.0.66
 # 内容：使用掩膜绘制直方图
 # 博客：http://www.bilibili996.com/Course?id=2605222000268
 # 作者：高仁宝

@@ -1,5 +1,5 @@
 ﻿/*
-OpenCv版本 OpenCvSharp4.4.8.0.20230708
+OpenCv版本 OpenCvSharp 4.4.8.0.20230708
 内容：图像缩放与图像金字塔
 博客：http://www.bilibili996.com/Course?id=5486413000167
 作者：高仁宝

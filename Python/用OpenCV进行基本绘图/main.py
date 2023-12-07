@@ -1,4 +1,4 @@
-# OpenCv版本 OpenCvSharp4.6.0.66
+# OpenCv版本：opencv-python 4.6.0.66
 # 内容：用OpenCV进行基本绘图
 # 博客：http://www.bilibili996.com/Course?id=5121811000097
 # 作者：高仁宝

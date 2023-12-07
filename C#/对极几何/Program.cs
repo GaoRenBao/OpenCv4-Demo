@@ -1,5 +1,5 @@
 ﻿/*
-OpenCv版本 OpenCvSharp4.4.8.0.20230708
+OpenCv版本 OpenCvSharp 4.4.8.0.20230708
 内容：对极几何
 博客：http://www.bilibili996.com/Course?id=52c06e9172914d5eb6443fbd8c466974
 作者：高仁宝

@@ -1,4 +1,4 @@
-# OpenCv版本 OpenCvSharp4.6.0.66
+# OpenCv版本：opencv-python 4.6.0.66
 # 内容：多对象模板匹配
 # 博客：http://www.bilibili996.com/Course?id=bd204811ae5949549f1a2fbeedaeb470
 # 作者：高仁宝

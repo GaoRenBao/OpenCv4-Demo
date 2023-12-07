@@ -1,5 +1,5 @@
 ﻿/*
-OpenCv版本 OpenCvSharp4.4.8.0.20230708
+OpenCv版本 OpenCvSharp 4.4.8.0.20230708
 内容：MSER区域检测
 博客：http://www.bilibili996.com/Course?id=09740476aebb4690a6f57e56063b28c8
 作者：高仁宝

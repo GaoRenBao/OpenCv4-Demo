@@ -1,5 +1,5 @@
 ﻿/*
-OpenCv版本 OpenCvSharp4.4.8.0.20230708
+OpenCv版本 OpenCvSharp 4.4.8.0.20230708
 内容：双目摄像头与图像拼接
 博客：http://www.bilibili996.com/Course?id=1048651000244
 作者：高仁宝

@@ -1,4 +1,4 @@
-# OpenCv版本 OpenCvSharp4.6.0.66
+# OpenCv版本：opencv-python 4.6.0.66
 # 内容：Maze-Solver迷宫解密
 # 博客：http://www.bilibili996.com/Course?id=1070695000259
 # 作者：高仁宝

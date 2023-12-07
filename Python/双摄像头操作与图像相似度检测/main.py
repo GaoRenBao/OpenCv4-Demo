@@ -1,4 +1,4 @@
-# OpenCv版本 OpenCvSharp4.6.0.66
+# OpenCv版本：opencv-python 4.6.0.66
 # 内容：双摄像头操作与图像相似度检测
 # 博客：http://www.bilibili996.com/Course?id=0431478000248
 # 作者：高仁宝

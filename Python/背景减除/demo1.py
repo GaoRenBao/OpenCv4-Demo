@@ -1,4 +1,4 @@
-# OpenCv版本 OpenCvSharp4.6.0.66
+# OpenCv版本：opencv-python 4.6.0.66
 # 内容：背景减除
 # 博客：http://www.bilibili996.com/Course?id=56cb7ea6a7b84e2297af1334aaeb7609
 # 作者：高仁宝

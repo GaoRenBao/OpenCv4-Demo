@@ -1,4 +1,4 @@
-# OpenCv版本 OpenCvSharp4.6.0.66
+# OpenCv版本：opencv-python 4.6.0.66
 # 内容：角点检测的FAST算法（FAST特征检测器）
 # 博客：http://www.bilibili996.com/Course?id=421a041d9cd54125a4d8f035ca7e2b24
 # 作者：高仁宝

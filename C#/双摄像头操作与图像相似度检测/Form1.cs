@@ -1,5 +1,5 @@
 ﻿/*
-OpenCv版本 OpenCvSharp4.4.8.0.20230708
+OpenCv版本 OpenCvSharp 4.4.8.0.20230708
 内容：双摄像头操作与图像相似度检测
 博客：http://www.bilibili996.com/Course?id=0431478000248
 作者：高仁宝

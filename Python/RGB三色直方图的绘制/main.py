@@ -1,4 +1,4 @@
-# OpenCv版本 OpenCvSharp4.6.0.66
+# OpenCv版本：opencv-python 4.6.0.66
 # 内容：RGB三色直方图的绘制
 # 博客：http://www.bilibili996.com/Course?id=2488638000215
 # 作者：高仁宝

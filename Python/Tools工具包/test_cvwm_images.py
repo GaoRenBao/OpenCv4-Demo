@@ -1,4 +1,4 @@
-# OpenCv版本 OpenCvSharp4.6.0.66
+# OpenCv版本：opencv-python 4.6.0.66
 # 内容：Tools工具包-窗体分配
 # 博客：http://www.bilibili996.com/Course?id=50a664470d6b45518b1ebda81f3b64e1
 # 作者：高仁宝

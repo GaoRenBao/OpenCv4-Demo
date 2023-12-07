@@ -1,5 +1,5 @@
 ﻿/*
-OpenCv版本 OpenCvSharp4.4.8.0.20230708
+OpenCv版本 OpenCvSharp 4.4.8.0.20230708
 内容：一维直方图的绘制
 博客：http://www.bilibili996.com/Course?id=2121468000214
 作者：高仁宝

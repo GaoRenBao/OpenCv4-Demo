@@ -1,4 +1,4 @@
-# OpenCv版本 OpenCvSharp4.6.0.66
+# OpenCv版本：opencv-python 4.6.0.66
 # 内容：图像缩放与图像金字塔
 # 博客：http://www.bilibili996.com/Course?id=5486413000167
 # 作者：高仁宝

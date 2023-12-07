@@ -1,4 +1,4 @@
-# OpenCv版本 OpenCvSharp4.6.0.66
+# OpenCv版本：opencv-python 4.6.0.66
 # 内容：FLANN结合SURF/SIFT进行关键点的描述和匹配
 # 博客：http://www.bilibili996.com/Course?id=3106495000236
 # 作者：高仁宝

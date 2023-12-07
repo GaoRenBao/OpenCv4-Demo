@@ -1,5 +1,5 @@
 ﻿/*
-OpenCv版本 OpenCvSharp4.4.8.0.20230708
+OpenCv版本 OpenCvSharp 4.4.8.0.20230708
 内容：支持向量机之处理线性不可分数据
 博客：http://www.bilibili996.com/Course?id=5095109000094
 作者：高仁宝

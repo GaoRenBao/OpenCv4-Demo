@@ -1,4 +1,4 @@
-# OpenCv版本 OpenCvSharp4.6.0.66
+# OpenCv版本：opencv-python 4.6.0.66
 # 内容：使用Tessract-OCR识别验证码
 # 博客：
 # 作者：高仁宝

@@ -1,5 +1,5 @@
 ﻿/*
-OpenCv版本 OpenCvSharp4.4.8.0.20230708
+OpenCv版本 OpenCvSharp 4.4.8.0.20230708
 内容：背景减除
 博客：http://www.bilibili996.com/Course?id=56cb7ea6a7b84e2297af1334aaeb7609
 作者：高仁宝

@@ -1,4 +1,4 @@
-# OpenCv版本 OpenCvSharp4.6.0.66
+# OpenCv版本：opencv-python 4.6.0.66
 # 内容：把鼠标当画笔
 # 博客：http://www.bilibili996.com/Course?id=3993445000251
 # 作者：高仁宝

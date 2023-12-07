@@ -1,4 +1,4 @@
-# OpenCv版本 OpenCvSharp4.6.0.66
+# OpenCv版本：opencv-python 4.6.0.66
 # 博客：http://www.bilibili996.com/Course/article_list?id=20224789774006
 # 作者：高仁宝
 # 时间：2023.11

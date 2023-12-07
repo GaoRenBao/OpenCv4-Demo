@@ -1,4 +1,4 @@
-# OpenCv版本 OpenCvSharp4.6.0.66
+# OpenCv版本：opencv-python 4.6.0.66
 # 内容：创建包围轮廓的圆形边
 # 博客：http://www.bilibili996.com/Course?id=3929903000204
 # 作者：高仁宝

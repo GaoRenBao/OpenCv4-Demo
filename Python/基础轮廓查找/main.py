@@ -1,4 +1,4 @@
-# OpenCv版本 OpenCvSharp4.6.0.66
+# OpenCv版本：opencv-python 4.6.0.66
 # 内容：基础轮廓查找
 # 博客：http://www.bilibili996.com/Course?id=3319137000193
 # 作者：高仁宝

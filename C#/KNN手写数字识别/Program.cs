@@ -1,5 +1,5 @@
 ﻿/*
-OpenCv版本 OpenCvSharp4.4.8.0.20230708
+OpenCv版本 OpenCvSharp 4.4.8.0.20230708
 内容：KNN手写数字识别
 博客：http://www.bilibili996.com/Course?id=cd8587c916e34bf6a65d6611f849c5d3
 作者：高仁宝

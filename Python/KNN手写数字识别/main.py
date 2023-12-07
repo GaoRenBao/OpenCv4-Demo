@@ -1,4 +1,4 @@
-# OpenCv版本 OpenCvSharp4.6.0.66
+# OpenCv版本：opencv-python 4.6.0.66
 # 内容：KNN手写数字识别
 # 博客：http://www.bilibili996.com/Course?id=cd8587c916e34bf6a65d6611f849c5d3
 # 作者：高仁宝

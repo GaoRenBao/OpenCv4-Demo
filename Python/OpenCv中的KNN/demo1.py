@@ -1,4 +1,4 @@
-# OpenCv版本 OpenCvSharp4.6.0.66
+# OpenCv版本：opencv-python 4.6.0.66
 # 内容：OpenCv中的KNN
 # 博客：http://www.bilibili996.com/Course?id=bf3a812d3521492cac7789f32a488c0a
 # 作者：高仁宝

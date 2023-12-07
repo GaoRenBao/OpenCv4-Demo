@@ -1,4 +1,4 @@
-# OpenCv版本 OpenCvSharp4.6.0.66
+# OpenCv版本：opencv-python 4.6.0.66
 # 内容：双目摄像头与图像拼接
 # 博客：http://www.bilibili996.com/Course?id=1048651000244
 # 作者：高仁宝

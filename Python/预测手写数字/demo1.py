@@ -1,4 +1,4 @@
-# OpenCv版本 OpenCvSharp4.6.0.66
+# OpenCv版本：opencv-python 4.6.0.66
 # 内容：预测手写数字
 # 博客：http://www.bilibili996.com/Course?id=e44b949a255b41e0bdc469abddbf495b
 # 作者：高仁宝

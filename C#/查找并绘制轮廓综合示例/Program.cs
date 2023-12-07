@@ -1,5 +1,5 @@
 ﻿/*
-OpenCv版本 OpenCvSharp4.4.8.0.20230708
+OpenCv版本 OpenCvSharp 4.4.8.0.20230708
 内容：查找并绘制轮廓综合示例
 博客：http://www.bilibili996.com/Course?id=0573457000194
 作者：高仁宝

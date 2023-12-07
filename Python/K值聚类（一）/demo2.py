@@ -1,4 +1,4 @@
-# OpenCv版本 OpenCvSharp4.6.0.66
+# OpenCv版本：opencv-python 4.6.0.66
 # 内容：K值聚类
 # 博客：http://www.bilibili996.com/Course?id=7d02676837f34dcc84606d906d877c3b
 # 作者：高仁宝

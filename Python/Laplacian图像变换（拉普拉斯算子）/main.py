@@ -1,4 +1,4 @@
-# OpenCv版本 OpenCvSharp4.6.0.66
+# OpenCv版本：opencv-python 4.6.0.66
 # 内容：Laplacian图像变换（拉普拉斯算子）
 # 博客：http://www.bilibili996.com/Course?id=4232193000169
 # 作者：高仁宝

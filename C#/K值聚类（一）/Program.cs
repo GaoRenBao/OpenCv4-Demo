@@ -1,5 +1,5 @@
 ﻿/*
-OpenCv版本 OpenCvSharp4.4.8.0.20230708
+OpenCv版本 OpenCvSharp 4.4.8.0.20230708
 内容：K值聚类（一）
 博客：http://www.bilibili996.com/Course?id=7d02676837f34dcc84606d906d877c3b
 作者：高仁宝

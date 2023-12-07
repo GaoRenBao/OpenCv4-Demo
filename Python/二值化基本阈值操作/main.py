@@ -1,4 +1,4 @@
-# OpenCv版本 OpenCvSharp4.6.0.66
+# OpenCv版本：opencv-python 4.6.0.66
 # 内容：二值化基本阈值操作
 # 博客：http://www.bilibili996.com/Course?id=4215192000168
 # 作者：高仁宝

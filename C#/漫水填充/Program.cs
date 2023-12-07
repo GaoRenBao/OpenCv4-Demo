@@ -1,5 +1,5 @@
 ﻿/*
-OpenCv版本 OpenCvSharp4.4.8.0.20230708
+OpenCv版本 OpenCvSharp 4.4.8.0.20230708
 内容：漫水填充
 博客：http://www.bilibili996.com/Course?id=5744370000163
 作者：高仁宝

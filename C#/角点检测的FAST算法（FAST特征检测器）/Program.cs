@@ -1,5 +1,5 @@
 ﻿/*
-OpenCv版本 OpenCvSharp4.4.8.0.20230708
+OpenCv版本 OpenCvSharp 4.4.8.0.20230708
 内容：角点检测的FAST算法（FAST特征检测器）
 博客：http://www.bilibili996.com/Course?id=421a041d9cd54125a4d8f035ca7e2b24
 作者：高仁宝

@@ -1,5 +1,5 @@
 ﻿/*
-OpenCv版本 OpenCvSharp4.4.8.0.20230708
+OpenCv版本 OpenCvSharp 4.4.8.0.20230708
 内容：删除图像中的水印
 博客：http://www.bilibili996.com/Course?id=b608bdd358e041478931886b8b08058c
 作者：高仁宝

@@ -1,4 +1,4 @@
-# OpenCv版本 OpenCvSharp4.6.0.66
+# OpenCv版本：opencv-python 4.6.0.66
 # 内容：OpenCV中的稠密光流
 # 博客：http://www.bilibili996.com/Course?id=6af89dda880846cca6da479b654d68d0
 # 作者：高仁宝

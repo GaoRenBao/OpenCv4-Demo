@@ -1,4 +1,4 @@
-# OpenCv版本 OpenCvSharp4.6.0.66
+# OpenCv版本：opencv-python 4.6.0.66
 # 内容：BRIEF描述符
 # 博客：http://www.bilibili996.com/Course?id=c0c16b9f18ad4b5da127eb7792333229
 # 作者：高仁宝

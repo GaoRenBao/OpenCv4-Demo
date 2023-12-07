@@ -1,5 +1,5 @@
 ﻿/*
-OpenCv版本 OpenCvSharp4.4.8.0.20230708
+OpenCv版本 OpenCvSharp 4.4.8.0.20230708
 内容：目标查找与跟踪 - Meanshift与CamShift
 博客：http://www.bilibili996.com/Course?id=0699ef6cd6e1407bbfb39a5e39b81e9a
 作者：高仁宝

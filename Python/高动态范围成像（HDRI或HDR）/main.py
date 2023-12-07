@@ -1,26 +1,32 @@
-# OpenCv版本 OpenCvSharp4.6.0.66
+# OpenCv版本：opencv-python 3.4.2.16
 # 内容：高动态范围成像（HDRI或HDR）
 # 博客：http://www.bilibili996.com/Course?id=ccb32eb54dd748f9a4fc137544039d51
 # 作者：高仁宝
 # 时间：2023.11
 
 """
-HDR.py:
-http://docs.opencv.org/3.2.0/d2/df0/tutorial_py_hdr.html
+opencv-python版本必须大于3.4.2.16（不含），createTonemapDurand被作者生气专利了，高版本无法使用
 
-了解如何从曝光序列生成和显示HDR图像。
-使用曝光融合合并曝光序列。
-高动态范围成像（HDRI或HDR）是一种用于成像和摄影的技术，可以重现比标准数字成像或摄影技术更大的动态光度范围。虽然人眼可以调整到广泛的光线条件，但大多数成像设备每通道使用8位，因此我们仅限于256级。当我们拍摄现实世界的场景时，明亮的地区可能曝光过度，而黑暗的区域可能曝光不足，所以我们无法使用单次曝光拍摄所有细节。HDR图像与每个通道使用超过8位（通常为32位浮点值）的图像一起使用，允许更宽的动态范围。
-有不同的获取HDR图像的方法，但最常见的是使用不同曝光值拍摄的场景的照片。要组合这些曝光，了解您的相机的响应功能是有用的，并且有算法来估计它。合并HDR图像后，必须将其转换回8位才能在通常的显示屏上进行查看。这个过程叫做tonemapping。当场景或相机的对象在拍摄之间移动时，会出现附加的复杂性，因为具有不同曝光的图像应该被注册和对齐。
-在本教程中，我们展示了两种算法（Debvec，Robertson）从曝光序列生成和显示HDR图像，并展示了一种称为曝光融合（Mertens）的替代方法，它产生低动态范围图像，不需要曝光时间数据。此外，我们估计对于许多计算机视觉算法具有重要价值的相机响应函数（CRF）。HDR管道的每一步都可以使用不同的算法和参数来实现，因此请参考参考手册来查看。
+安装包下载：
+https://pypi.tuna.tsinghua.edu.cn/simple/opencv-python/
+https://pypi.tuna.tsinghua.edu.cn/simple/opencv-contrib-python/
+
+然后离线安装：
+pip install numpy==1.14.5 -i https://mirror.baidu.com/pypi/simple
+pip install opencv_python-3.4.2.16-cp37-cp37m-win_amd64.whl opencv_contrib_python-3.4.2.16-cp37-cp37m-win_amd64.whl
 """
 
 import cv2
 import numpy as np
+from re import match
+
+# 通过这个代码，可以查看opencv中是否包含createTonemapDurand
+cv2_filtered = filter(lambda v: match('.*Tonemap', v), dir(cv2))
+[print(val) for val in cv2_filtered]
 
 # 第一阶段只是将所有图像加载到列表中。此外，我们将需要常规HDR算法的曝光时间。注意数据类型，因为图像应为1通道或3通道8位（np.uint8），曝光时间需要为float32，以秒为单位。
 # Loading exposure images into a list
-img_fn = ["1tl.jpg", "2tr.jpg", "3bl.jpg", "4br.jpg"]
+img_fn = ["../images/tbs/1tl.jpg", "../images/tbs/2tr.jpg", "../images/tbs/3bl.jpg", "../images/tbs/4br.jpg"]
 img_list = [cv2.imread(fn) for fn in img_fn]
 exposure_times = np.array([15.0, 2.5, 0.25, 0.0333], dtype=np.float32)
 
@@ -53,7 +59,7 @@ res_mertens_8bit = np.clip(res_mertens * 255, 0, 255).astype('uint8')
 cv2.imshow("ldr_debvec.jpg", res_debvec_8bit)
 cv2.imshow("ldr_robertson.jpg", res_robertson_8bit)
 cv2.imshow("fusion_mertens.jpg", res_mertens_8bit)
-
+cv2.waitKey()
 exit(0)
 
 # Estimate camera response function (CRF)

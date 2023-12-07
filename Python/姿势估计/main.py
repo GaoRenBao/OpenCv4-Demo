@@ -1,4 +1,4 @@
-# OpenCv版本 OpenCvSharp4.6.0.66
+# OpenCv版本：opencv-python 4.6.0.66
 # 内容：姿势估计
 # 博客：http://www.bilibili996.com/Course?id=f2a6235f09a849a9a93974ce8b00272f
 # 作者：高仁宝

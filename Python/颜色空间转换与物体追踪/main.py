@@ -1,4 +1,4 @@
-# OpenCv版本 OpenCvSharp4.6.0.66
+# OpenCv版本：opencv-python 4.6.0.66
 # 内容：颜色空间转换与物体追踪
 # 博客：http://www.bilibili996.com/Course?id=1618402000255
 # 作者：高仁宝

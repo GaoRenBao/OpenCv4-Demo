@@ -1,4 +1,4 @@
-# OpenCv版本 OpenCvSharp4.6.0.66
+# OpenCv版本：opencv-python 4.6.0.66
 # 内容：多通道图像混合
 # 博客：http://www.bilibili996.com/Course?id=5129212000098
 # 作者：高仁宝

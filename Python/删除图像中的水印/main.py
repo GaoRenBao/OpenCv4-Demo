@@ -1,4 +1,4 @@
-# OpenCv版本 OpenCvSharp4.6.0.66
+# OpenCv版本：opencv-python 4.6.0.66
 # 内容：删除图像中的水印
 # 博客：http://www.bilibili996.com/Course?id=b608bdd358e041478931886b8b08058c
 # 作者：高仁宝

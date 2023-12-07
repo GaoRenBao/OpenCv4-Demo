@@ -1,5 +1,5 @@
 ﻿/*
-OpenCv版本 OpenCvSharp4.4.8.0.20230708
+OpenCv版本 OpenCvSharp 4.4.8.0.20230708
 内容：使用Haar分类器之面部检测
 博客：http://www.bilibili996.com/Course?id=be9bc00c296a4fe59e0c86474bbf9f43
 作者：高仁宝

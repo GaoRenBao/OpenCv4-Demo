@@ -1,4 +1,4 @@
-# OpenCv版本 OpenCvSharp4.6.0.66
+# OpenCv版本：opencv-python 4.6.0.66
 # 内容：H-S二维直方图的绘制/2D直方图
 # 博客：http://www.bilibili996.com/Course?id=1114057000213
 # 作者：高仁宝

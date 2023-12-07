@@ -1,4 +1,4 @@
-# OpenCv版本 OpenCvSharp4.6.0.66
+# OpenCv版本：opencv-python 4.6.0.66
 # 内容：CLAHE有限对比适应性直方图均衡化
 # 博客：http://www.bilibili996.com/Course?id=1854373000267
 # 作者：高仁宝
