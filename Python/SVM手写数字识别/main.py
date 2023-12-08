@@ -1,5 +1,5 @@
 # OpenCv版本：opencv-python 4.6.0.66
-# 内容：使用SVM进行-手写数据OCR
+# 内容：SVM手写数字识别
 # 博客：http://www.bilibili996.com/Course?id=17494cb1802e403ea25d1096a5659478
 # 作者：高仁宝
 # 时间：2023.11
@@ -61,6 +61,11 @@ trainData = np.float32(hogdata).reshape(-1, 64)
 # 把与图片对应的数字生成出来
 responses = np.repeat(np.arange(10), 250)[:, np.newaxis]
 
+# print(len(trainData), trainData.shape)
+# cv.imshow('src', trainData[0])
+# cv.waitKey(0)
+# exit(0)
+
 # 实例化对象
 svm = cv.ml.SVM_create()
 # 设置核函数
@@ -83,6 +88,7 @@ deskewed = [list(map(deskew, row)) for row in test_cells]
 hogdata = [list(map(hog, row)) for row in deskewed]
 # 检验样本序列化
 testData = np.float32(hogdata).reshape(-1, bin_n * 4)
+print(len(hogdata))
 # 生成识别结果
 result = svm.predict(testData)[1]
 

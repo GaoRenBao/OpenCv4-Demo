@@ -1,14 +1,13 @@
 ﻿/*
 OpenCv版本 OpenCvSharp 4.4.8.0.20230708
-内容：KNN手写数字识别
-博客：http://www.bilibili996.com/Course?id=cd8587c916e34bf6a65d6611f849c5d3
+内容：SVM手写数字识别
+博客：http://www.bilibili996.com/Course?id=17494cb1802e403ea25d1096a5659478
 作者：高仁宝
 时间：2023.11
-
-参考博客：http://chanpinxue.cn/archives/5506.html
 */
 
 using OpenCvSharp;
+using OpenCvSharp.ML;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,12 +16,92 @@ namespace demo
 {
     internal class Program
     {
-        static void Main(string[] args)
+        #region GitHub上的一个demo
+        private static double Function(double x)
         {
-            demo1();
-            //demo2();
+            return x + 50 * Math.Sin(x / 15.0);
         }
 
+        /// <summary>
+        /// GitHub上的一个demo
+        /// https://github.com/shimat/opencvsharp_samples/tree/master/SamplesLegacy/Samples/SVMSample.cs
+        /// </summary>
+        public static void RunTest()
+        {
+            // Training data          
+            var points = new Point2f[500];
+            var responses = new int[points.Length];
+            var rand = new Random();
+            for (int i = 0; i < responses.Length; i++)
+            {
+                float x = rand.Next(0, 300);
+                float y = rand.Next(0, 300);
+                points[i] = new Point2f(x, y);
+                responses[i] = (y > Function(x)) ? 1 : 2;
+            }
+
+            // Show training data and f(x)
+            using (Mat pointsPlot = Mat.Zeros(300, 300, MatType.CV_8UC3))
+            {
+                for (int i = 0; i < points.Length; i++)
+                {
+                    int x = (int)points[i].X;
+                    int y = (int)(300 - points[i].Y);
+                    int res = responses[i];
+                    Scalar color = (res == 1) ? Scalar.Red : Scalar.GreenYellow;
+                    pointsPlot.Circle(x, y, 2, color, -1);
+                }
+                // f(x)
+                for (int x = 1; x < 300; x++)
+                {
+                    int y1 = (int)(300 - Function(x - 1));
+                    int y2 = (int)(300 - Function(x));
+                    pointsPlot.Line(x - 1, y1, x, y2, Scalar.LightBlue, 1);
+                }
+                Cv2.ImShow("pointsPlot", pointsPlot);
+            }
+
+            // Train
+            var dataMat = new Mat(points.Length, 2, MatType.CV_32FC1, points);
+            var resMat = new Mat(responses.Length, 1, MatType.CV_32SC1, responses);
+            var svm = SVM.Create();
+            // normalize data
+            dataMat /= 300.0;
+
+            // SVM parameters
+            svm.Type = SVM.Types.CSvc;
+            svm.KernelType = SVM.KernelTypes.Rbf;
+            svm.TermCriteria = TermCriteria.Both(1000, 0.000001);
+            svm.Degree = 100.0;
+            svm.Gamma = 100.0;
+            svm.Coef0 = 1.0;
+            svm.C = 1.0;
+            svm.Nu = 0.5;
+            svm.P = 0.1;
+
+            svm.Train(dataMat, SampleTypes.RowSample, resMat);
+
+            // Predict for each 300x300 pixel
+            Mat retPlot = Mat.Zeros(300, 300, MatType.CV_8UC3);
+            for (int x = 0; x < 300; x++)
+            {
+                for (int y = 0; y < 300; y++)
+                {
+                    float[] sample = { x / 300f, y / 300f };
+                    var sampleMat = new Mat(1, 2, MatType.CV_32FC1, sample);
+                    int ret = (int)svm.Predict(sampleMat);
+                    var plotRect = new Rect(x, 300 - y, 1, 1);
+                    if (ret == 1)
+                        retPlot.Rectangle(plotRect, Scalar.Red);
+                    else if (ret == 2)
+                        retPlot.Rectangle(plotRect, Scalar.GreenYellow);
+                }
+            }
+            Cv2.ImShow("retPlot", retPlot);
+        }
+        #endregion
+
+        #region SVM手写数字识别
         /// <summary>
         /// 切图
         /// </summary>
@@ -64,25 +143,19 @@ namespace demo
         }
 
         /// <summary>
-        /// 模型训练
+        /// SVM手写数字识别
         /// </summary>
-        static void demo1()
+        static void demo()
         {
             // 切图
             var cells = RoiImages("../../../images/digits.png");
 
             // 训练数据数量，前400张图片用来训练
             int train_sample_count = 400 * 10;
-            // 测试数据数量，后100张图片用来测试
-            int test_sample_count = 100 * 10;
             // 声明训练数据集合 mat，图像尺寸：20*20
             Mat trainData = new Mat(train_sample_count, 20 * 20, MatType.CV_32FC1);
-            // 声明测试数据集合 mat
-            Mat testData = new Mat(test_sample_count, 20 * 20, MatType.CV_32FC1);
             // 声明训练数据标签 mat
-            Mat trainLabel = new Mat(train_sample_count, 1, MatType.CV_32FC1);
-            // 声明测试数据标签 mat
-            Mat testLabel = new Mat(test_sample_count, 1, MatType.CV_32FC1);
+            Mat trainLabel = new Mat(train_sample_count, 1, MatType.CV_32SC1);
 
             // 组织训练数据，循环训练文件夹内所有图片。
             int trainNum = 0;
@@ -103,85 +176,32 @@ namespace demo
                     */
                     temp.Reshape(0, 1).CopyTo(trainData.Row(trainNum));
                     // 写入到训练标签集合的mat内
-                    trainLabel.Set<float>(trainNum, i);
+                    // 这个必须是int类型，不能用float，和knn的操作有点差异
+                    trainLabel.Set<int>(trainNum, i);
                     trainNum++;
                 }
             }
 
-            // 组织测试数据
-            int testNum = 0;
-            for (int i = 0; i < 10; i++)
-            {
-                var cell = cells[i].Skip(400);
-                foreach (Mat temp in cell)
-                {
-                    temp.ConvertTo(temp, MatType.CV_32FC1);
-                    temp.Reshape(0, 1).CopyTo(testData.Row(testNum));
-                    testLabel.Set<float>(testNum, i);
-                    testNum++;
-                }
-            }
+            // 实例化对象
+            SVM svm = SVM.Create();
+            // 设置核函数
+            svm.KernelType = SVM.KernelTypes.Linear;
+            // 设置训练类型
+            svm.Type = SVM.Types.CSvc;
+            svm.C = 2.67;
+            svm.Gamma = 5.383;
+            // 输入样本，进行训练
+            svm.Train(trainData, SampleTypes.RowSample, trainLabel);
+            // 存储训练结果
+            //svm.Save("svm_data.dat");
 
-            // 创建knn模型
-            OpenCvSharp.ML.KNearest knn = OpenCvSharp.ML.KNearest.Create();
-            // k 可以根据需要自行调整
-            int k = 3;
-            // 设置K值
-            knn.DefaultK = k;
-            // 设置KNN是进行分类还是回归
-            knn.IsClassifier = true;
-            // 设置算法类型 BruteForce 或 KdTree
-            knn.AlgorithmType = OpenCvSharp.ML.KNearest.Types.BruteForce;
-            // 训练
-            knn.Train(trainData, OpenCvSharp.ML.SampleTypes.RowSample, trainLabel);
-
-            // 训练完成之后，可以用knn.Save()保存模型文件。
-            knn.Save("knn_digits.yml");
-
-            // 测试
-            Mat result = new Mat(test_sample_count, 1, MatType.CV_32FC1);
-            knn.FindNearest(testData, k, result);
-            int t = 0;
-            int f = 0;
-            for (int i = 0; i < test_sample_count; i++)
-            {
-                int predict = (int)result.At<float>(i);
-                int actual = (int)testLabel.At<float>(i);
-                if (predict == actual)
-                {
-                    Console.WriteLine("正确：" + predict + "-" + actual);
-                    t++;
-                }
-                else
-                {
-                    Console.WriteLine("错误------：" + predict + "-" + actual);
-                    f++;
-                }
-            }
-
-            double accuracy = (t * 1.0) / (t + f);
-            Console.WriteLine("准确率：" + accuracy);
-            Console.Read();
-        }
-
-        /// <summary>
-        /// 模型加载与测试
-        /// </summary>
-        static void demo2()
-        {
-            // 测试数据数量
+            /**************  Now testing ***************/
+            // 测试数据数量，后100张图片用来测试
             int test_sample_count = 100 * 10;
-            // 声明测试数据集合 mat，
+            // 声明测试数据集合 mat
             Mat testData = new Mat(test_sample_count, 20 * 20, MatType.CV_32FC1);
             // 声明测试数据标签 mat
             Mat testLabel = new Mat(test_sample_count, 1, MatType.CV_32FC1);
-
-            // 创建knn模型
-            OpenCvSharp.ML.KNearest knn = OpenCvSharp.ML.KNearest.Load("knn_digits.yml");
-
-            // 读取测试切图
-            var cells = RoiImages("../../../images/digits.png");
-
             // 组织测试数据
             int testNum = 0;
             for (int i = 0; i < 10; i++)
@@ -196,19 +216,14 @@ namespace demo
                 }
             }
 
-            int k = 3;
-
-            // 测试
-            Mat result = new Mat(test_sample_count, 1, MatType.CV_32FC1);
-            // 在训练样本中寻找最接近待分类样本的前K个样本，并返回K个样本中数量最多类型的标签。
-            knn.FindNearest(testData, k, result);
+            Mat result = new Mat();
+            svm.Predict(testData, result);
             int t = 0;
             int f = 0;
             for (int i = 0; i < test_sample_count; i++)
             {
                 int predict = (int)result.At<float>(i);
                 int actual = (int)testLabel.At<float>(i);
-
                 if (predict == actual)
                 {
                     Console.WriteLine("正确：" + predict + "-" + actual);
@@ -222,8 +237,17 @@ namespace demo
             }
 
             double accuracy = (t * 1.0) / (t + f);
-            Console.WriteLine("准确率：" + accuracy); // 准确率：0.931
+            Console.WriteLine("准确率：" + accuracy); // 准确率：0.908
             Console.Read();
+        }
+        #endregion
+
+        static void Main(string[] args)
+        {
+            //RunTest();
+            //Cv2.WaitKey();
+
+            demo();
         }
     }
 }

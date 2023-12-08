@@ -229,6 +229,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "计算摄影学-图像去�
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "高动态范围成像（HDRI或HDR）", "高动态范围成像（HDRI或HDR）\高动态范围成像（HDRI或HDR）.csproj", "{DDC22C4A-3571-4FCE-AA35-D1A1938E87AE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "使用SVM进行-手写数据OCR", "使用SVM进行-手写数据OCR\使用SVM进行-手写数据OCR.csproj", "{76DA6DC5-713A-4119-ABCC-426D38EA6B85}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -1595,6 +1597,18 @@ Global
 		{DDC22C4A-3571-4FCE-AA35-D1A1938E87AE}.Release|x64.Build.0 = Release|Any CPU
 		{DDC22C4A-3571-4FCE-AA35-D1A1938E87AE}.Release|x86.ActiveCfg = Release|Any CPU
 		{DDC22C4A-3571-4FCE-AA35-D1A1938E87AE}.Release|x86.Build.0 = Release|Any CPU
+		{76DA6DC5-713A-4119-ABCC-426D38EA6B85}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{76DA6DC5-713A-4119-ABCC-426D38EA6B85}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{76DA6DC5-713A-4119-ABCC-426D38EA6B85}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{76DA6DC5-713A-4119-ABCC-426D38EA6B85}.Debug|x64.Build.0 = Debug|Any CPU
+		{76DA6DC5-713A-4119-ABCC-426D38EA6B85}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{76DA6DC5-713A-4119-ABCC-426D38EA6B85}.Debug|x86.Build.0 = Debug|Any CPU
+		{76DA6DC5-713A-4119-ABCC-426D38EA6B85}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{76DA6DC5-713A-4119-ABCC-426D38EA6B85}.Release|Any CPU.Build.0 = Release|Any CPU
+		{76DA6DC5-713A-4119-ABCC-426D38EA6B85}.Release|x64.ActiveCfg = Release|Any CPU
+		{76DA6DC5-713A-4119-ABCC-426D38EA6B85}.Release|x64.Build.0 = Release|Any CPU
+		{76DA6DC5-713A-4119-ABCC-426D38EA6B85}.Release|x86.ActiveCfg = Release|Any CPU
+		{76DA6DC5-713A-4119-ABCC-426D38EA6B85}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
