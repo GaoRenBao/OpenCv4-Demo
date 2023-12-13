@@ -6,9 +6,7 @@ images目录保存了程序运行所需要的所有文件。
 
 OpenCv4 demo C#/C++/Python 三合一版本
 
-官方演示地址：http://www.bilibili996.com/Course/article_list?id=20224789774006
-
-【demo还在持续补充中...】
+官方演示地址：[小宅博客-OpenCv基础](http://www.bilibili996.com/Course/article_list?id=20224789774006)
 
 |  语言 | OpneCv版本  | IDE |
 | ------------ | ------------ | ------------ |
