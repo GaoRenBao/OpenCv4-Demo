@@ -121,8 +121,7 @@ namespace demo
             faceNet.SetInput(blob, "data");
 
             var detection = faceNet.Forward("detection_out");
-            var detectionMat = new Mat(detection.Size(2), detection.Size(3), MatType.CV_32F,
-                detection.Ptr(0));
+            var detectionMat = new Mat(detection.Size(2), detection.Size(3), MatType.CV_32F, detection.Ptr(0));
             for (int i = 0; i < detectionMat.Rows; i++)
             {
                 float confidence = detectionMat.At<float>(i, 2);
@@ -139,7 +138,7 @@ namespace demo
             }
 
             Cv2.ImShow("frame", frame);
-            Cv2.ImWrite("frame.jpg", frame);
+            //Cv2.ImWrite("frame.jpg", frame);
             Cv2.WaitKey();
         }
 
@@ -168,7 +167,7 @@ namespace demo
             // load our serialized model from disk
             Console.WriteLine("[INFO] loading model...");
 
-            string prototxt = "../../../images/dnn/bvlc_googlenet.prototxt";
+            string prototxt = "../../../images/dnn//bvlc_googlenet.prototxt";
             string caffeModel = "../../../images/dnn/bvlc_googlenet.caffemodel";
             Net net = CvDnn.ReadNetFromCaffe(prototxt, caffeModel);
 
@@ -221,8 +220,8 @@ namespace demo
         static void Main(string[] args)
         {
             //Demo1();
-            Demo2();
-            //Demo3();
+            //Demo2();
+            Demo3();
         }
     }
 }
