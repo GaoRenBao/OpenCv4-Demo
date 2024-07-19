@@ -4,7 +4,7 @@ OpenCv4 demo C#/C++/Python 三合一版本
 
 >images目录保存了程序运行所需要的所有文件。运行前，需要把images文件夹放到对应语言目录下，不然程序运行会找不到文件。
 
-官方演示地址：[小宅博客-OpenCv基础](http://www.bilibili996.com/Course/article_list?id=20224789774006)
+官方演示地址：[小宅博客-OpenCv基础](http://www.bilibili996.com/?id=7d213576787d4ca2bedf507eef8855dc)
 
 |  语言 | OpneCv版本  | IDE |
 | ------------ | ------------ | ------------ |
