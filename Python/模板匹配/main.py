@@ -47,10 +47,18 @@ def on_Matching(x):
     # CCoeff = 4
     # CCoeffNormed = 5
 
+    matched = 0  # 匹配度
     if g_nMatchMethod == 0 or g_nMatchMethod == 1:
         matchLocation = minLocation
+        matched = minValue
     else:
         matchLocation = maxLocation
+        matched = maxValue
+
+    txts = ["SqDiff", "SqDiffNormed", "CCorr", "CCorrNormed", "CCoeff", "CCoeffNormed"]
+    font = cv2.FONT_HERSHEY_COMPLEX  # 设置字体
+    cv2.putText(srcImage, txts[g_nMatchMethod], (10, 30), font, 1, (0, 0, 255), 2)
+    cv2.putText(srcImage, f"{matched}", (10, 65), font, 1, (0, 0, 255), 2)
 
     # 绘制出矩形，并显示最终结果
     cv2.rectangle(srcImage, matchLocation,
@@ -79,6 +87,3 @@ cv2.setTrackbarPos('g_nMatchMethod', 'WINDOW_NAME1', 0)
 cv2.imshow("WINDOW_NAME1", g_srcImage)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
-
-
-

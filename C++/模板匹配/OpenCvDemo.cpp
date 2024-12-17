@@ -8,6 +8,10 @@ OpenCv版本 opencv-4.5.5-vc14_vc15
 
 #include <opencv2/highgui/highgui.hpp>
 #include <opencv2/imgproc/imgproc.hpp>
+#include <iostream>
+#include <sstream>
+#include <string>
+#include <iomanip> 
 
 using namespace cv;
 using namespace std;
@@ -60,14 +64,26 @@ void on_Matching(int, void*)
 	minMaxLoc(g_resultImage, &minValue, &maxValue, &minLocation, &maxLocation, Mat());
 
 	//【5】对于方法 SQDIFF 和 SQDIFF_NORMED, 越小的数值有着更高的匹配结果. 而其余的方法, 数值越大匹配效果越好
+	double matched = 0; // 匹配度
 	if (g_nMatchMethod == TM_SQDIFF || g_nMatchMethod == TM_SQDIFF_NORMED)
 	{
 		matchLocation = minLocation;
+		matched = minValue;
 	}
 	else
 	{
 		matchLocation = maxLocation;
+		matched = maxValue;
 	}
+
+	std::string txts[] = { "SqDiff","SqDiffNormed","CCorr","CCorrNormed","CCoeff","CCoeffNormed" };
+
+	std::ostringstream oss;
+	// digits10 返回 double 类型能表示的有效数字的十进制位数，加 1 是为了安全起见（尽管通常不需要）
+	oss << std::fixed << std::setprecision(std::numeric_limits<double>::digits10 + 1);
+	oss << matched;
+	putText(srcImage, txts[g_nMatchMethod], Point(10, 30), FONT_HERSHEY_COMPLEX, 1, Scalar(0, 0, 255), 2, LINE_AA);
+	putText(srcImage, oss.str(), Point(10, 65), FONT_HERSHEY_COMPLEX, 1, Scalar(0, 0, 255), 2, LINE_AA);
 
 	//【6】绘制出矩形，并显示最终结果
 	rectangle(srcImage, matchLocation, Point(matchLocation.x + g_templateImage.cols, matchLocation.y + g_templateImage.rows), Scalar(0, 0, 255), 2, 8, 0);

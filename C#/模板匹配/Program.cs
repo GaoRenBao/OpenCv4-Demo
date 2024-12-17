@@ -63,15 +63,20 @@ namespace demo
             Cv2.MinMaxLoc(g_resultImage, out minValue, out maxValue, out minLocation, out maxLocation);
 
             //【5】对于方法 SQDIFF 和 SQDIFF_NORMED, 越小的数值有着更高的匹配结果. 而其余的方法, 数值越大匹配效果越好
+            double matched = 0; // 匹配度
             if ((TemplateMatchModes)g_nMatchMethod == TemplateMatchModes.SqDiff ||
                 (TemplateMatchModes)g_nMatchMethod == TemplateMatchModes.SqDiffNormed)
             {
                 matchLocation = minLocation;
+                matched = minValue; 
             }
             else
             {
                 matchLocation = maxLocation;
+                matched = maxValue;
             }
+            string[] txts = { "SqDiff", "SqDiffNormed", "CCorr", "CCorrNormed", "CCoeff", "CCoeffNormed" };
+            Cv2.PutText(srcImage, $"{txts[g_nMatchMethod]} {matched}", new Point(10, 50), HersheyFonts.HersheyComplex, 1, new Scalar(0, 0, 255), 2);
 
             //【6】绘制出矩形，并显示最终结果
             Cv2.Rectangle(srcImage, matchLocation,
@@ -86,3 +91,5 @@ namespace demo
         }
     }
 }
+
+
